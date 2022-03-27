@@ -51,16 +51,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">
-      La fédération Internationale de football souhaite créer une base de données des coupes du monde des nations depuis la création de cette
-      compétition. Dans chaque coupe du monde, un nombre d’équipes se présentent, représentant chacune un pays. Chaque équipe est constituée
-      d’un certain nombre de joueurs et d’un staff technique (l’entraîneur et ses collaborateurs). Chaque joueur appartenant à une équipe est identifié
-      par un numéro. Un joueur peut recevoir des sanctions durant les matchs de la compétition (cartons jaunes ou rouges). Chaque équipe joue un
-      nombre de matchs. Un match est caractérisé par sa date, son lieu (un stade), son rang dans la compétition, les équipent participantes ainsi que le
-      score final. Un match est géré par un arbitre principal et trois arbitres assistants.
-      On souhaite obtenir des statistiques diverses sur la participation des joueurs, des équipes et des arbitres dans une ou plusieurs coupes du monde.
-      On pourra inclure dans chaque entité tous les éléments réalistes possibles à condition de les justifier. 
-      </a>
+      <a href="#about-the-project"></a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
@@ -86,7 +77,14 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+La fédération Internationale de football souhaite créer une base de données des coupes du monde des nations depuis la création de cette
+compétition. Dans chaque coupe du monde, un nombre d’équipes se présentent, représentant chacune un pays. Chaque équipe est constituée
+d’un certain nombre de joueurs et d’un staff technique (l’entraîneur et ses collaborateurs). Chaque joueur appartenant à une équipe est identifié
+par un numéro. Un joueur peut recevoir des sanctions durant les matchs de la compétition (cartons jaunes ou rouges). Chaque équipe joue un
+nombre de matchs. Un match est caractérisé par sa date, son lieu (un stade), son rang dans la compétition, les équipent participantes ainsi que le
+score final. Un match est géré par un arbitre principal et trois arbitres assistants.
+On souhaite obtenir des statistiques diverses sur la participation des joueurs, des équipes et des arbitres dans une ou plusieurs coupes du monde.
+On pourra inclure dans chaque entité tous les éléments réalistes possibles à condition de les justifier. 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
