@@ -29,11 +29,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Coupe du monde des nations du football </h3>
 
   <p align="center">
     project_description
@@ -56,7 +53,16 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#about-the-project">
+      La fédération Internationale de football souhaite créer une base de données des coupes du monde des nations depuis la création de cette
+      compétition. Dans chaque coupe du monde, un nombre d’équipes se présentent, représentant chacune un pays. Chaque équipe est constituée
+      d’un certain nombre de joueurs et d’un staff technique (l’entraîneur et ses collaborateurs). Chaque joueur appartenant à une équipe est identifié
+      par un numéro. Un joueur peut recevoir des sanctions durant les matchs de la compétition (cartons jaunes ou rouges). Chaque équipe joue un
+      nombre de matchs. Un match est caractérisé par sa date, son lieu (un stade), son rang dans la compétition, les équipent participantes ainsi que le
+      score final. Un match est géré par un arbitre principal et trois arbitres assistants.
+      On souhaite obtenir des statistiques diverses sur la participation des joueurs, des équipes et des arbitres dans une ou plusieurs coupes du monde.
+      On pourra inclure dans chaque entité tous les éléments réalistes possibles à condition de les justifier. 
+      </a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
