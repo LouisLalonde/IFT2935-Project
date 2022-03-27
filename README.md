@@ -99,7 +99,7 @@ Git clone the repository
 
 ### Prerequisites
 
-Nonne
+None
 
 ### Installation
 
