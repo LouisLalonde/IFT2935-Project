@@ -1,5 +1,4 @@
 package main.java.com.companyname.project;
-
 import main.java.com.companyname.project.controllers.DataBaseController;
 import main.java.com.companyname.project.controllers.DataComputationController;
 import main.java.com.companyname.project.controllers.QueryBuilderController;

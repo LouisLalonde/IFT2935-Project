@@ -7,13 +7,14 @@ public class DataBase {
 
     public DataBase(){};
 
-    public ProxyModel ProxyModel(){
-        return new ProxyModel();
+    // Execute the query with the JDBC driver
+    public void executeQuery(String query){
+        // Execute
     }
 
-    // Execute the query with the JDBC driver
-    public void main(String query){
-        // Execute
+    public void init(String schema){
+        ProxyModel proxy = new ProxyModel();
+        proxy.initSchema(schema);
     }
     
 }

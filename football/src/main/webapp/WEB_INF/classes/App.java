@@ -1,6 +1,5 @@
 package main.webapp.WEB_INF.classes;
 import java.util.HashMap;
-
 import main.webapp.WEB_INF.services.UserService;
 
 /**
@@ -8,8 +7,14 @@ import main.webapp.WEB_INF.services.UserService;
  */
 public class App {
 
-    public void frontEnd(){
+    public static void frontEnd(){
         // Front-end logic goes here.
+    }
+
+    public static void backEnd(UserService userService){
+        userService.appUseServices().startApi();
+        // Initializing the data base with the given schema
+        userService.appUseServices().appUseDataBase().dataBaseService().init("");
     }
 
     public static void main(String[] args) throws Exception {
@@ -21,6 +26,6 @@ public class App {
         // Logic
         System.out.println(variables);
         // Starting the back-end API
-        userService.appUseServices().startApi();
+        backEnd(userService);
     }
 }
