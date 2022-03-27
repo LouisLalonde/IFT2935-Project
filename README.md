@@ -112,17 +112,8 @@ Nonne
   ```sh
   nano football/src/main/resources/config/config.properties
   ```
-3. Enter your local data base credentials in the config.properties
-   ```java
-    DB_PORT=
-    DB_SERVER=
-    DB_USER=
-    DB_PASSWORD=
-    DB_NAME=
-  ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- USAGE EXAMPLES -->
