@@ -109,16 +109,16 @@ Nonne
    git clone https://github.com/LouisLalonde/IFT2935-Project.git
    ```
 2. Create a config.properties file at the following path : 
-```sh
-nano football/src/main/resources/config/config.properties
-```
+  ```sh
+  nano football/src/main/resources/config/config.properties
+  ```
 3. Enter your local data base credentials in the config.properties
    ```java
-  DB_PORT=
-  DB_SERVER=
-  DB_USER=
-  DB_PASSWORD=
-  DB_NAME=
+    DB_PORT=
+    DB_SERVER=
+    DB_USER=
+    DB_PASSWORD=
+    DB_NAME=
   ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
