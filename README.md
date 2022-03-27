@@ -114,11 +114,11 @@ Nonne
   ```
 3. Enter your local data base credentials in the config.properties
    ```java
-    DB_PORT
-    DB_SERVER
-    DB_USER
-    DB_PASSWORD
-    DB_NAME
+    DB_PORT=5432
+    DB_SERVER=localhost
+    DB_USER=louis
+    DB_PASSWORD=123456
+    DB_NAME=football
   ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
