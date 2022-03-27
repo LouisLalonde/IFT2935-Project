@@ -24,7 +24,7 @@
 [![MIT License][license-shield]][license-url]
 
 <br />
-<div align="center">xsss
+<div align="center">
 
 <h3 align="center">Coupe du monde des nations du football </h3>
 
@@ -109,7 +109,7 @@ None
    ```
 2. Create a config.properties file at the following path : 
   ```sh
-    nano football/src/main/resources/config/config.properties
+  nano football/src/main/resources/config/config.properties
   ```
 3. Enter your local data base credentials in the config.properties
     
