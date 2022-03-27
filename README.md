@@ -29,7 +29,6 @@
 <h3 align="center">Coupe du monde des nations du football </h3>
 
   <p align="center">
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/github_username/repo_name">View Demo</a>
