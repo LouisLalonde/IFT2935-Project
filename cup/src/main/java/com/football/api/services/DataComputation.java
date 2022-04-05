@@ -1,5 +1,5 @@
-package com.football.services;
-import com.football.models.DataComputationModel;
+package com.football.api.services;
+import com.football.api.models.DataComputationModel;
 
 public class DataComputation {
     

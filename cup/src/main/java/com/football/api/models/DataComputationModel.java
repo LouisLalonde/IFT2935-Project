@@ -1,4 +1,4 @@
-package com.football.models;
+package com.football.api.models;
 
 /**
  * Compute and handle the front-end data

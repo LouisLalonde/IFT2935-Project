@@ -1,6 +1,6 @@
-package com.football.controller;
-import com.football.controller.interfaces.DataHandler;
-import com.football.services.DataComputation;
+package com.football.api.controller;
+import com.football.api.controller.interfaces.DataHandler;
+import com.football.api.services.DataComputation;
 
 public class DataComputationController implements DataHandler {
 

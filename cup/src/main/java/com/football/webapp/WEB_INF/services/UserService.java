@@ -1,5 +1,5 @@
 package com.football.webapp.WEB_INF.services;
-import com.football.Index;
+import com.football.api.Index;
 
 /**
  * Provide the methods to establish communication with the api

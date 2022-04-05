@@ -1,7 +1,7 @@
-package com.football;
-import com.football.controller.DataBaseController;
-import com.football.controller.DataComputationController;
-import com.football.controller.QueryBuilderController;
+package com.football.api;
+import com.football.api.controller.DataBaseController;
+import com.football.api.controller.DataComputationController;
+import com.football.api.controller.QueryBuilderController;
 
 /**
  * Main class for the API
@@ -19,7 +19,7 @@ public class Index {
         return new QueryBuilderController();
     }
     
-    public DataComputationController appUseQuComputation(){
+    public DataComputationController appUseDataComputation(){
         return new DataComputationController();
     }
 

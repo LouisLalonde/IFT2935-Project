@@ -1,5 +1,5 @@
-package com.football.services;
-import com.football.models.QueryModel;
+package com.football.api.services;
+import com.football.api.models.QueryModel;
 /**
  * Handles the different queries operations
  */

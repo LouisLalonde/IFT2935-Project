@@ -1,6 +1,7 @@
-package com.football.controller;
-import com.football.services.DataBase;
-import com.football.controller.interfaces.DataHandler;
+package com.football.api.controller;
+import com.football.api.services.DataBase;
+import com.football.api.services.DataBind;
+import com.football.api.controller.interfaces.DataHandler;
 
 public class DataBaseController implements DataHandler{
 
@@ -16,6 +17,10 @@ public class DataBaseController implements DataHandler{
 
     public DataBase dataBaseService(){
         return new DataBase();
+    }
+
+    public DataBind dataBindService(){
+        return new DataBind();
     }
     
 }

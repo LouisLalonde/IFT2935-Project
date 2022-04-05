@@ -8,9 +8,9 @@
  
         <!-- Connection settings -->
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/student</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/</property>
         <property name="hibernate.connection.username">postgres</property>
-        <property name="hibernate.connection.password">postgres</property>
+        <property name="hibernate.connection.password">123456</property>
  
         <!-- SQL dialect -->
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
@@ -22,7 +22,7 @@
         <property name="hibernate.hbm2ddl.auto">update</property>
  
         <!-- Annotated entity classes -->
-        <mapping class="tutorial.hibernate.postgresql.Student"/>
+        <mapping class="com.football.webapp.WEB_INF.classes.Student"/>
         
     </session-factory>
 </hibernate-configuration>

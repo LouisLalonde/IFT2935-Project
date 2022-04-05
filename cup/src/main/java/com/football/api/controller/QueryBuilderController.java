@@ -1,6 +1,6 @@
-package com.football.controller;
-import com.football.controller.interfaces.DataHandler;
-import com.football.services.QueryBuilder;
+package com.football.api.controller;
+import com.football.api.controller.interfaces.DataHandler;
+import com.football.api.services.QueryBuilder;
 
 public class QueryBuilderController implements DataHandler{
 
