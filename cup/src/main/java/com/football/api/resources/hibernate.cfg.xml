@@ -19,9 +19,22 @@
         <property name="show_sql">true</property>
  
         <!-- Update database on startup -->
-        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.hbm2ddl.auto">validate</property>
  
         <!-- Annotated entity classes -->
+        <!-- <mapping class="com.football.webapp.WEB_INF.classes.Arbitre"/>
+        <mapping class="com.football.webapp.WEB_INF.classes.Blessure"/>
+        <mapping class="com.football.webapp.WEB_INF.classes.But"/>
+        <mapping class="com.football.webapp.WEB_INF.classes.CoupeDuMonde"/>
+        <mapping class="com.football.webapp.WEB_INF.classes.Equipe"/>
+        <mapping class="com.football.webapp.WEB_INF.classes.Joueur"/>
+        <mapping class="com.football.webapp.WEB_INF.classes.Match"/>
+        <mapping class="com.football.webapp.WEB_INF.classes.Personne"/>
+        <mapping class="com.football.webapp.WEB_INF.classes.Sanction"/>
+        <mapping class="com.football.webapp.WEB_INF.classes.Staff"/>
+        <mapping class="com.football.webapp.WEB_INF.classes.TypeArbitre"/>
+        <mapping class="com.football.webapp.WEB_INF.classes.TypeBut"/>
+        <mapping class="com.football.webapp.WEB_INF.classes.TypeSanction"/> -->
         <mapping class="com.football.webapp.WEB_INF.classes.Student"/>
         
     </session-factory>

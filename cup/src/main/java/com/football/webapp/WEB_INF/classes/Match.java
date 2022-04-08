@@ -1,5 +1,4 @@
 package com.football.webapp.WEB_INF.classes;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -7,7 +6,6 @@ import java.util.HashMap;
  * 
  */
 public class Match {
-    Date date;
     String lieu;
     int rang;
     ArrayList<String> equipes_participantes;

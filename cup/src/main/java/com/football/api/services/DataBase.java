@@ -32,15 +32,15 @@ public class DataBase {
      * @return
      * @throws JsonProcessingException
      */
-    public HashMap<String, Object> executeQuery(Operation operation, HashMap<String, String> queryData) throws JsonProcessingException{
+    public HashMap<String, Object> executeQuery(Session session, Operation operation, HashMap<String, String> queryData) throws JsonProcessingException{
         // Constructors
         ResponseModel responseModel = new ResponseModel();
         QueryModel queryModel = new QueryModel();
         // Data
         // Logic
         // Beginning the connection
-        SessionFactory factory =  DatabaseModel.buildSessionFactory();
-        Session session = factory.openSession();
+        // SessionFactory factory =  DatabaseModel.buildSessionFactory();
+        // Session session = factory.openSession();
         Transaction transaction = DatabaseModel.buildTransaction(session);
 
         switch(operation) {
@@ -50,10 +50,11 @@ public class DataBase {
                 try {
                     // Executing the query
                     session.persist(object);
-                    // Closing the connexion
-                    DatabaseModel.endTransaction(session, transaction);
+                    // commiting the transaction
+                    DatabaseModel.commitTransaction(transaction);
                     return responseModel.success("");
                 } catch(Exception e){
+                    DatabaseModel.rollbackTransaction(transaction);
                     return responseModel.error(e);
                 }
             case READ:
@@ -66,21 +67,29 @@ public class DataBase {
                     ArrayList<Object> objects = (ArrayList<Object>) query.list();
                     // Serializing the return objects
                     String serialized = DataBindModel.serialize(objects);
-                    
+                    // commiting the transaction
+                    DatabaseModel.commitTransaction(transaction);
                     return responseModel.success(serialized);
                 } catch(Exception e) {
+                    DatabaseModel.rollbackTransaction(transaction);
                     return responseModel.error(e);
                 }
             case UPDATE:
                 try {
+                    // commiting the transaction
+                    DatabaseModel.commitTransaction(transaction);
                     return responseModel.success("");
                 } catch (Exception e){
+                    DatabaseModel.rollbackTransaction(transaction);
                     return responseModel.error(e);
                 }
             case DELETE:
                 try {
+                    // commiting the transaction
+                    DatabaseModel.commitTransaction(transaction);
                     return responseModel.success("");
                 } catch (Exception e){
+                    DatabaseModel.rollbackTransaction(transaction);
                     return responseModel.error(e);
                 }
             default:

@@ -31,12 +31,24 @@ public class DatabaseModel {
 
 	/**
 	 * 
+	 * @param transaction
+	 */
+	public static void commitTransaction(Transaction transaction) {
+		transaction.commit();
+	}
+
+	/**
+	 * 
 	 * @param session
 	 * @param transaction
 	 */
-	public static void endTransaction(Session session, Transaction transaction){
+	public static void endTransaction(Session session, Transaction transaction) {
 		transaction.commit();
 		session.close();
+	}
+
+	public static void rollbackTransaction(Transaction transaction) {
+		transaction.rollback();
 	}
     
 }
