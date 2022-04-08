@@ -103,6 +103,7 @@ Git clone the repository
 - Base de données avec comme nom: football
 - Privilège tous accès à l'utilisateur: postgres
 - Mot de passe de l'utilisateur postgres: postgres
+- psql -h localhost -U postgres -d footbbal -f import.sql
 
 ### Installation
 
