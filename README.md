@@ -120,15 +120,10 @@ Git clone the repository
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## Guide d'utilisation
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
+- Lancer le fichier exécutable jar
+- Cliquer sur un des 4 boutons pour exécuter une requête vers la base de données
 
 <!-- ROADMAP -->
 ## Roadmap
