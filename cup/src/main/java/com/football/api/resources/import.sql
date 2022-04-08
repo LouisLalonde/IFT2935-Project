@@ -24,7 +24,6 @@ CREATE TABLE Equipe (
 ); 
  
 CREATE TABLE Personne (
-    ID_Personne int PRIMARY KEY,
     Prenom text,
     Nom text,
     Role text
@@ -32,22 +31,23 @@ CREATE TABLE Personne (
 
 CREATE TABLE Joueur (
     ID_Joueur int PRIMARY KEY,
-    ID_Personne int,
-    FOREIGN KEY (ID_Personne) REFERENCES Personne(ID_Personne),
+    --ID_Personne int,
+    --FOREIGN KEY (ID_Personne) REFERENCES Personne(ID_Personne),
     ID_Equipe int,
     FOREIGN KEY (ID_Equipe) REFERENCES Equipe(ID_Equipe),
     Numero int,
     Poste text
-);
+)INHERITS(Personne);
+
 
 CREATE TABLE Staff (
     ID_Staff int PRIMARY KEY,
-    ID_Personne int,
-    FOREIGN KEY (ID_Personne) REFERENCES Personne(ID_Personne),
+    --ID_Personne int,
+    --FOREIGN KEY (ID_Personne) REFERENCES Personne(ID_Personne),
     ID_Equipe int,
     FOREIGN KEY (ID_Equipe) REFERENCES Equipe(ID_Equipe),
     Anciennete text
-);
+)INHERITS(Personne);
 
 CREATE TABLE Type_Arbitre (
     ID_Type_Arbitre int PRIMARY KEY,
@@ -56,11 +56,11 @@ CREATE TABLE Type_Arbitre (
 
 CREATE TABLE Arbitre (
     ID_Arbitre int PRIMARY KEY,
-    ID_Personne int,
-    FOREIGN KEY (ID_Personne) REFERENCES Personne(ID_Personne),
+    --ID_Personne int,
+    --FOREIGN KEY (ID_Personne) REFERENCES Personne(ID_Personne),
     ID_Type_Arbitre int,
     FOREIGN KEY (ID_Type_Arbitre) REFERENCES Type_Arbitre(ID_Type_Arbitre)
-);
+)INHERITS(Personne);
 
 CREATE TABLE Blessure (
     ID_Blessure int PRIMARY KEY,
@@ -127,6 +127,17 @@ CREATE TABLE Sanction (
     ID_Type_Sanction int,
     FOREIGN KEY (ID_Type_Sanction) REFERENCES Type_Sanction(ID_Type_Sanction)
 );
+
+INSERT INTO CoupeDuMonde VALUES ();
+INSERT INTO CoupeDuMonde VALUES ();
+INSERT INTO CoupeDuMonde VALUES ();
+INSERT INTO CoupeDuMonde VALUES ();
+INSERT INTO CoupeDuMonde VALUES ();
+INSERT INTO CoupeDuMonde VALUES ();
+INSERT INTO CoupeDuMonde VALUES ();
+INSERT INTO CoupeDuMonde VALUES ();
+INSERT INTO CoupeDuMonde VALUES ();
+INSERT INTO CoupeDuMonde VALUES ();
 
 commit;
 rollback;
