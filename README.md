@@ -99,7 +99,7 @@ Git clone the repository
 
 ### Préalable pour le développement
 
-- JDK >= 17
+- JDK >= 17.0
 - Apache Maven 3.8.5
 - Postgresql
 - Base de données avec comme nom: football
@@ -116,8 +116,7 @@ Git clone the repository
   ```sh
   nano football/src/main/resources/config/config.properties
   ```
-3. Enter your local data base credentials in the config.properties
-    
+  
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
@@ -175,10 +174,10 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* [Louis Lalonde](20162457)
-* [Jonathan Therrien](20157376)
-* [Vanessa Bellegarde](20184886)
-* [Alexandre Hamila ](20181634)
+* [Louis Lalonde - 20162457](#)
+* [Jonathan Therrien - 20157376](#)
+* [Vanessa Bellegarde - 20184886](#)
+* [Alexandre Hamila - 20181634](#)
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
