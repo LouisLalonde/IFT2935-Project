@@ -26,7 +26,7 @@ CREATE TABLE Equipe (
 CREATE TABLE Personne (
     Prenom text,
     Nom text,
-    Role text
+    Date_Naissance date
 );
 
 CREATE TABLE Joueur (
