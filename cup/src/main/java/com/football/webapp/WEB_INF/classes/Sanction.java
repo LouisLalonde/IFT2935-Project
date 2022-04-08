@@ -3,7 +3,7 @@ package com.football.webapp.WEB_INF.classes;
 /**
  * 
  */
-public enum Sanctions {
+public enum Sanction {
     Carton_jaune,
     Carton_rouge
 }

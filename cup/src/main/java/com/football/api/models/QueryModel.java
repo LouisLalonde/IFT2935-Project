@@ -1,7 +1,7 @@
 package com.football.api.models;
+import java.util.HashMap;
 import com.football.api.models.CrudOperators.*;
 import com.football.webapp.WEB_INF.classes.Student;
-import org.hibernate.query.Query;
 /**
  * Provides data logic processing for the QueryBuilder service
  */
@@ -9,8 +9,15 @@ public class QueryModel {
 
     public QueryModel(){};
 
-    public Student create(String query){
+    /**
+     * 
+     * @param queryData
+     * @return
+     */
+    public Student create(HashMap<String, String> queryData){
+        // Constructors
         Student student = new Student();
+        // Logic
         student.setFirstName("Jason");
         student.setLastName("Roy");
         student.setRoll(01);
@@ -18,18 +25,50 @@ public class QueryModel {
         return student;
     }
 
-    public String read(String query){
+    /**
+     * 
+     * @param queryNumber
+     * @return
+     */
+    public String read(String queryNumber){
         // Constructors
-        return query;
+        Read read = new Read();
+        // Logic
+        switch(queryNumber) {
+            case "1":
+            // Query 1
+              return "SELECT * FROM STUDENT";
+            case "2":
+            // Query 2
+              return "";
+            case "3":
+            // Query 3
+                return "";
+            case "4":
+            // Query 4
+                return "";
+          }
+        return "";
     }
 
+    /**
+     * 
+     * @param query
+     * @return
+     */
     public String update(String query){
-        Update builder = new Update();
+        // Constructors
+        Update update = new Update();
         return "";
     }
     
+    /**
+     * 
+     * @param query
+     * @return
+     */
     public String delete(String query){
-        Delete builder = new Delete();
+        Delete delete = new Delete();
         return "";
     }
     
