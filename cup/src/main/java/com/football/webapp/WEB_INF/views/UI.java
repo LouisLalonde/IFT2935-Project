@@ -12,6 +12,7 @@ import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.layout.Region;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import org.hibernate.Session;
@@ -33,6 +34,11 @@ public class UI extends Application {
             public void handle(ActionEvent event) {
             UserService userService = new UserService();
             try {
+                // Testing the creation of a student in the data base 
+                userService.appUseServices().appUseDataBase().dataBaseService().executeQuery(session,
+                Operation.CREATE, new HashMap<String, String>() {{
+                    put("", "");
+                }});
                 HashMap<String, Object> res =  userService.appUseServices().appUseDataBase().dataBaseService().executeQuery(
                     session, Operation.READ, new HashMap<String, String>() {{
                     put("queryNumber", "1");
@@ -53,6 +59,7 @@ public class UI extends Application {
                     );
                   }
                 a.setContentText(display.toString());
+                a.getDialogPane().setMinHeight(Region.USE_PREF_SIZE);
                 // show the dialog
                 a.show();
             } catch (JsonProcessingException e) {

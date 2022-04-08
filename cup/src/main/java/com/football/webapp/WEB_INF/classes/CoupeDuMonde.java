@@ -7,8 +7,9 @@ import org.hibernate.annotations.GenericGenerator;
 
 @Entity(name = "CoupeDuMonde")
 public class CoupeDuMonde {
+    @Id
     @Column(name = "Annee")
-    private String Annee; 
+    private Integer Annee; 
     @Column(name = "Pays_Coupe")
     private String Pays_Coupe; 
     @Column(name = "Start_Date")
@@ -16,7 +17,7 @@ public class CoupeDuMonde {
     @Column(name = "End_date")
     private String End_date;
 
-    public CoupeDuMonde(String Annee, String Pays_Coupe, String Start_Date, String End_date){
+    public CoupeDuMonde(Integer Annee, String Pays_Coupe, String Start_Date, String End_date){
         this.Annee = Annee;
         this.Pays_Coupe = Pays_Coupe;
         this.Start_Date = Start_Date;
@@ -24,11 +25,11 @@ public class CoupeDuMonde {
     }
 
 
-    public String getAnnee() {
+    public Integer getAnnee() {
         return this.Annee;
     }
 
-    public void setAnnee(String Annee) {
+    public void Integer(Integer Annee) {
         this.Annee = Annee;
     }
 
