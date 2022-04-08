@@ -128,6 +128,7 @@ CREATE TABLE Sanction (
     FOREIGN KEY (ID_Type_Sanction) REFERENCES Type_Sanction(ID_Type_Sanction)
 );
 
+/*INSERT INTO CoupeDuMonde VALUES ();
 INSERT INTO CoupeDuMonde VALUES ();
 INSERT INTO CoupeDuMonde VALUES ();
 INSERT INTO CoupeDuMonde VALUES ();
@@ -137,7 +138,7 @@ INSERT INTO CoupeDuMonde VALUES ();
 INSERT INTO CoupeDuMonde VALUES ();
 INSERT INTO CoupeDuMonde VALUES ();
 INSERT INTO CoupeDuMonde VALUES ();
-INSERT INTO CoupeDuMonde VALUES ();
+*/
 
 commit;
 rollback;
