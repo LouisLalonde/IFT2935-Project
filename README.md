@@ -17,11 +17,11 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
+[[Contributors][contributors-shield]][contributors-url]
+[[Forks][forks-shield]][forks-url]
+[[Stargazers][stars-shield]][stars-url]
+[[Issues][issues-shield]][issues-url]
+[[MIT License][license-shield]][license-url]
 
 <br />
 <div align="center">
@@ -137,12 +137,10 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] Feature 1
 - [ ] Feature 2
 - [ ] Feature 3
-    - [ ] Nested Feature
 
 See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- CONTRIBUTING -->
