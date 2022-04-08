@@ -93,13 +93,18 @@ On pourra inclure dans chaque entité tous les éléments réalistes possibles �
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+## Pour débuter le projet
 
 Git clone the repository
 
-### Prerequisites
+### Préalable pour le développement
 
-None
+- JDK >= 17
+- Apache Maven 3.8.5
+- Postgresql
+- Base de données avec comme nom: football
+- Privilège tous accès à l'utilisateur: postgres
+- Mot de passe de l'utilisateur postgres: postgres
 
 ### Installation
 
