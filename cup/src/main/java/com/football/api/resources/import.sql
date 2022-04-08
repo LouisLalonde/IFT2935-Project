@@ -12,8 +12,8 @@ set search_path to football;
 CREATE TABLE CoupeDuMonde (
     Annee int PRIMARY KEY,
     Pays_Coupe text,
-    Start_Date int,
-    End_date int
+    Start_Date date,
+    End_date date
 ); 
 
 CREATE TABLE Equipe (
@@ -128,17 +128,16 @@ CREATE TABLE Sanction (
     FOREIGN KEY (ID_Type_Sanction) REFERENCES Type_Sanction(ID_Type_Sanction)
 );
 
-/*INSERT INTO CoupeDuMonde VALUES ();
-INSERT INTO CoupeDuMonde VALUES ();
-INSERT INTO CoupeDuMonde VALUES ();
-INSERT INTO CoupeDuMonde VALUES ();
-INSERT INTO CoupeDuMonde VALUES ();
-INSERT INTO CoupeDuMonde VALUES ();
-INSERT INTO CoupeDuMonde VALUES ();
-INSERT INTO CoupeDuMonde VALUES ();
-INSERT INTO CoupeDuMonde VALUES ();
-INSERT INTO CoupeDuMonde VALUES ();
-*/
+INSERT INTO CoupeDuMonde VALUES (1934, "Italy", 1934-05-27, 1934-06-10);
+INSERT INTO CoupeDuMonde VALUES (1938, "France", 1938-06-04, 1934-06-18);
+INSERT INTO CoupeDuMonde VALUES (1950, "Brazil", 1950-06-24, 1934-07-16);
+INSERT INTO CoupeDuMonde VALUES (1954, "Switzerland", 1954-06-16, 1954-07-04);
+INSERT INTO CoupeDuMonde VALUES (1958, "Sweden", 1958-06-08, 1958-06-29);
+INSERT INTO CoupeDuMonde VALUES (1962, "Chile", 1962-05-30, 1962-06-17);
+INSERT INTO CoupeDuMonde VALUES (1966, "England", 1966-06-11, 1934-06-30);
+INSERT INTO CoupeDuMonde VALUES (1970, "Mexico", 1970-04-31, 1970-06-21);
+INSERT INTO CoupeDuMonde VALUES (1974, "Germany", 1974-06-13, 1974-07-07);
+INSERT INTO CoupeDuMonde VALUES (1978, "Argentina", 1978-06-01, 1978-06-25);
 
 commit;
 rollback;
