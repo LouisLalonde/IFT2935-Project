@@ -7,7 +7,7 @@ public class QueryBuilderController implements DataHandler{
     public QueryBuilderController controller(){
         return new QueryBuilderController();
     }
-
+    
     @Override
     public String handle(String data){
         // Handle the data

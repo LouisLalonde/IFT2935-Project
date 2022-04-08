@@ -1,5 +1,4 @@
 package com.football.api.models;
-import org.hibernate.query.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -12,9 +11,6 @@ public class DatabaseModel {
 	private static String hibernateCFG = "com/football/api/resources/hibernate.cfg.xml";
 
 	public DatabaseModel(){}
-
-	public void initSchema(String schema) {
-	}
 	
 	/**
 	 * Create a session for the current request

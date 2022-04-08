@@ -3,10 +3,27 @@ import java.util.HashMap;
 
 public class ResponseModel {
     
-    public HashMap<String, Object> success(String status, Object payload){
+    /**
+     * 
+     * @param payload
+     * @return
+     */
+    public HashMap<String, Object> success(Object payload){
         HashMap<String, Object> res = new HashMap<>();
-        res.put("status", status);
-        res.put("response", payload);
+        res.put("status", "200");
+        res.put("body", payload);
+        return res;
+    }
+
+    /**
+     * 
+     * @param payload
+     * @return
+     */
+    public HashMap<String, Object> error(Object payload){
+        HashMap<String, Object> res = new HashMap<>();
+        res.put("status", "400");
+        res.put("body", payload);
         return res;
     }
 }

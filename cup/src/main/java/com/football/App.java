@@ -14,9 +14,8 @@ public class App {
     }
 
     public static void backEnd(UserService userService){
+        // Starting the back-end
         userService.appUseServices().startApi();
-        // Initializing the data base with the given schema
-        userService.appUseServices().appUseDataBase().dataBaseService().init("");
     }
 
     public static void main(String[] args) throws Exception {
@@ -27,11 +26,17 @@ public class App {
         // Starting the back-end API
         backEnd(userService);
         // Testing the creation of a student in the data base 
-        userService.appUseServices().appUseDataBase().dataBaseService().executeQuery(Operation.CREATE, "");
+        userService.appUseServices().appUseDataBase().dataBaseService().executeQuery(Operation.CREATE, new HashMap<String, String>() {{
+            put("", "");
+        }});
         // Testing the read of the student table
-        HashMap<String, Object> res =  userService.appUseServices().appUseDataBase().dataBaseService().executeQuery(Operation.READ, "SELECT * FROM student;");
+        HashMap<String, Object> res =  userService.appUseServices().appUseDataBase().dataBaseService().executeQuery(
+            Operation.READ, new HashMap<String, String>() {{
+                put("queryNumber", "1");
+                put("mapCalss", "com.football.webapp.WEB_INF.classes.Student");
+            }});
         System.out.println("Sdtout ---");
-        String jsonObjects = (String) res.get("response");
+        String jsonObjects = (String) res.get("body");
         System.out.println(jsonObjects);
         // Converting the json objects to the given class
         ArrayList<Student> students = userService.appUseServices().appUseDataBase().dataBindService().DataBindModel().deserialize(jsonObjects, Student.class);
