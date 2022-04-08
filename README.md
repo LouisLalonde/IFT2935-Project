@@ -24,6 +24,8 @@
 <div align="center">
 
 <h3 align="center">Coupe du monde des nations du football </h3>
+  
+</div>
 
 <!-- TABLE OF CONTENTS -->
 <details>
