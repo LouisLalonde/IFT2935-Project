@@ -3,6 +3,8 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import java.sql.Date;
+
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity(name = "Staff")
@@ -18,7 +20,7 @@ public class Staff extends Personne{
     private Integer Anciennete;
     
 
-    public Staff(String Prenom, String Nom, String Date_Naissance, Integer ID_Staff, Integer ID_Equipe, Integer Anciennete) {
+    public Staff(String Prenom, String Nom, Date Date_Naissance, Integer ID_Staff, Integer ID_Equipe, Integer Anciennete) {
         super(Prenom, Nom, Date_Naissance);
         this.ID_Staff = ID_Staff;
         this.ID_Equipe = ID_Equipe;

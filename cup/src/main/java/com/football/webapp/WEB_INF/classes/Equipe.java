@@ -13,12 +13,12 @@ public class Equipe {
     @Column(name = "ID_Equipe")
     private Integer ID_Equipe;
     @Column(name = "Annee")
-    private String Annee;
+    private Integer Annee;
     @Column(name = "Pays_Equipe")
     private String Pays_Equipe;
 
 
-    public Equipe(Integer ID_Equipe, String Annee, String Pays_Equipe) {
+    public Equipe(Integer ID_Equipe, Integer Annee, String Pays_Equipe) {
         this.ID_Equipe = ID_Equipe;
         this.Annee = Annee;
         this.Pays_Equipe = Pays_Equipe;
@@ -33,11 +33,11 @@ public class Equipe {
         this.ID_Equipe = ID_Equipe;
     }
 
-    public String getAnnee() {
+    public Integer getAnnee() {
         return this.Annee;
     }
 
-    public void setAnnee(String Annee) {
+    public void setAnnee(Integer Annee) {
         this.Annee = Annee;
     }
 

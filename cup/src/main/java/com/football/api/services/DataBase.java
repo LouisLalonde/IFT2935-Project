@@ -3,7 +3,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.football.api.models.DatabaseModel;
 import com.football.api.models.QueryModel;
 import com.football.api.models.ResponseModel;
-import com.football.webapp.WEB_INF.classes.*;
+import com.football.webapp.WEB_INF.classes.CoupeDuMonde;
 import com.football.api.models.DataBindModel;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -60,10 +60,9 @@ public class DataBase {
             case READ:
                 try {
                     String queryNumber = queryData.get("queryNumber");
-                    Class mapCalss = Class.forName(queryData.get("mapCalss"));
-
+                    Class mapClass = Class.forName(queryData.get("mapClass"));
                     String readQuery =  queryModel.read(queryNumber);
-                    Query query = session.createNativeQuery(readQuery, mapCalss);
+                    Query query = session.createNativeQuery(readQuery, mapClass);
                     ArrayList<Object> objects = (ArrayList<Object>) query.list();
                     // Serializing the return objects
                     String serialized = DataBindModel.serialize(objects);

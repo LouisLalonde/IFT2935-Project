@@ -33,7 +33,7 @@ public class QueryModel {
         switch(queryNumber) {
             case "1":
             // Query 1
-              return "SELECT * FROM coupedumonde";
+              return "SELECT * FROM football.coupedumonde";
             case "2":
             // Query 2
               return "";

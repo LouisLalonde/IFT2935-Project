@@ -5,11 +5,9 @@
  
 <hibernate-configuration>
     <session-factory>
-        <property name="hibernate.hbm2ddl.auto">create</property> 
-        <property name="hibernate.hbm2ddl.import_files">/import.sql</property>
         <!-- Connection settings -->
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/football</property>
         <property name="hibernate.connection.username">postgres</property>
         <property name="hibernate.connection.password">postgres</property>
  
@@ -18,24 +16,20 @@
  
         <!-- Print executed SQL to stdout -->
         <property name="show_sql">true</property>
- 
-        <!-- Update database on startup
-        <property name="hibernate.hbm2ddl.auto">create</property> 
-        <property name="hibernate.hbm2ddl.import_files">/import.sql</property> -->
+        <property name="hibernate.hbm2ddl.auto">validate</property> 
         <!-- Annotated entity classes -->
-        <!-- <mapping class="com.football.webapp.WEB_INF.classes.Arbitre"/>
+        <mapping class="com.football.webapp.WEB_INF.classes.Arbitre"/>
         <mapping class="com.football.webapp.WEB_INF.classes.Blessure"/>
-        <mapping class="com.football.webapp.WEB_INF.classes.But"/> -->
-        <!-- <mapping class="com.football.webapp.WEB_INF.classes.CoupeDuMonde"/> -->
-        <!-- <mapping class="com.football.webapp.WEB_INF.classes.Equipe"/>
+        <mapping class="com.football.webapp.WEB_INF.classes.But"/>
+        <mapping class="com.football.webapp.WEB_INF.classes.CoupeDuMonde"/>
+        <mapping class="com.football.webapp.WEB_INF.classes.Equipe"/>
         <mapping class="com.football.webapp.WEB_INF.classes.Joueur"/>
         <mapping class="com.football.webapp.WEB_INF.classes.Match"/>
-        <mapping class="com.football.webapp.WEB_INF.classes.Personne"/>
         <mapping class="com.football.webapp.WEB_INF.classes.Sanction"/>
         <mapping class="com.football.webapp.WEB_INF.classes.Staff"/>
         <mapping class="com.football.webapp.WEB_INF.classes.TypeArbitre"/>
         <mapping class="com.football.webapp.WEB_INF.classes.TypeBut"/>
-        <mapping class="com.football.webapp.WEB_INF.classes.TypeSanction"/> -->
+        <mapping class="com.football.webapp.WEB_INF.classes.TypeSanction"/>
         
     </session-factory>
 </hibernate-configuration>

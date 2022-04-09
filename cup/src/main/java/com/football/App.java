@@ -1,6 +1,5 @@
 package com.football;
 import java.util.HashMap;
-import com.football.webapp.WEB_INF.classes.CoupeDuMonde;
 import com.football.api.services.DataBase.Operation;
 import com.football.webapp.WEB_INF.services.UserService;
 import com.football.webapp.WEB_INF.views.UI;
@@ -29,11 +28,15 @@ public class App {
         // Logic
         // Starting the back-end API
         Session session = backEnd(userService);
-        // HashMap<String, Object> res =  userService.appUseServices().appUseDataBase().dataBaseService().executeQuery(
-        //             session, Operation.READ, new HashMap<String, String>() {{
-        //             put("queryNumber", "1");
-        //             put("mapCalss", "com.football.webapp.WEB_INF.classes.CoupeDuMonde");
-        //         }});
+        HashMap<String, Object> res =  userService.appUseServices().appUseDataBase().dataBaseService().executeQuery(
+                    session, Operation.READ, new HashMap<String, String>() {{
+                    put("queryNumber", "1");
+                    put("mapClass", "com.football.webapp.WEB_INF.classes.CoupeDuMonde");
+                }});
+        System.out.println(res);
+        //String jsonObjects = (String) res.get("body");
+        // Converting the json objects to the given class
+        //ArrayList<CoupeDuMonde> coupeDuMondes = userService.appUseServices().appUseDataBase().dataBindService().DataBindModel().deserialize(jsonObjects, CoupeDuMonde.class);
         
         // String jsonObjects = (String) res.get("body");
         // Starting the front-end

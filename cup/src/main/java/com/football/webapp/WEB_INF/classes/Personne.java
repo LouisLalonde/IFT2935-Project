@@ -1,23 +1,19 @@
 package com.football.webapp.WEB_INF.classes;
+import java.sql.Date;
 import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.MappedSuperclass;
+import jakarta.persistence.Inheritance;
+import jakarta.persistence.InheritanceType;
 
-import org.hibernate.annotations.GenericGenerator;
-
-@MappedSuperclass
-public class Personne {
-
+@Inheritance(strategy = InheritanceType.JOINED)
+public abstract class Personne {
     @Column(name = "Prenom")
     private String Prenom;
     @Column(name = "Nom")
     private String Nom;
     @Column(name = "Date_Naissance")
-    private String Date_Naissance;
+    private Date Date_Naissance;
 
-
-    public Personne(String Prenom, String Nom, String Date_Naissance) {
+    public Personne(String Prenom, String Nom, Date Date_Naissance) {
         this.Prenom = Prenom;
         this.Nom = Nom;
         this.Date_Naissance = Date_Naissance;
@@ -40,11 +36,11 @@ public class Personne {
         this.Nom = Nom;
     }
 
-    public String getDate_Naissance() {
+    public Date getDate_Naissance() {
         return this.Date_Naissance;
     }
 
-    public void setDate_Naissance(String Date_Naissance) {
+    public void setDate_Naissance(Date Date_Naissance) {
         this.Date_Naissance = Date_Naissance;
     }
 
