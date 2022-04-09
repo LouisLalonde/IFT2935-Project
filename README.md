@@ -17,9 +17,6 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 
@@ -27,46 +24,8 @@
 <div align="center">
 
 <h3 align="center">Coupe du monde des nations du football </h3>
-
-  <p align="center">
-    <br />
-    <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
-  </p>
+  
 </div>
-
-
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project"></a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
-
 
 
 <!-- ABOUT THE PROJECT -->
@@ -88,18 +47,25 @@ On pourra inclure dans chaque entité tous les éléments réalistes possibles �
 ### Built With
 
 * [Java](https://www.java.com/fr/)
+* [Apache Maven](https://maven.apache.org/index.html)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+## Pour débuter le projet
 
 Git clone the repository
 
-### Prerequisites
+### Préalable pour le développement
 
-None
+- JDK >= 17.0
+- Apache Maven 3.8.5
+- Postgresql
+- Base de données avec comme nom: football
+- Privilège tous accès à l'utilisateur: postgres
+- Mot de passe de l'utilisateur postgres: postgres
+- psql -h localhost -U postgres -d football -f import.sql
 
 ### Installation
 
@@ -111,21 +77,15 @@ None
   ```sh
   nano football/src/main/resources/config/config.properties
   ```
-3. Enter your local data base credentials in the config.properties
-    
+  
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## Guide d'utilisation
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
+- Lancer le fichier exécutable jar
+- Cliquer sur un des 4 boutons pour exécuter une requête vers la base de données
 
 <!-- ROADMAP -->
 ## Roadmap
@@ -133,12 +93,10 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] Feature 1
 - [ ] Feature 2
 - [ ] Feature 3
-    - [ ] Nested Feature
 
 See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- CONTRIBUTING -->
@@ -167,25 +125,13 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
-<!-- CONTACT -->
-## Contact
-
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
-
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
-* []()
-
+* [Louis Lalonde - 20162457](#)
+* [Jonathan Therrien - 20157376](#)
+* [Vanessa Bellegarde - 20184886](#)
+* [Alexandre Hamila - 20181634](#)
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 

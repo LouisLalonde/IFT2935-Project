@@ -1,8 +1,5 @@
 package com.football.webapp.WEB_INF.classes;
 
-/**
- * 
- */
-public class Date {
+public class Blessure {
     
 }

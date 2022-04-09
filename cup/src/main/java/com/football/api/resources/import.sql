@@ -1,10 +1,9 @@
---Vanessa Bellegarde (20184886) 
---Jonathan Therrien (20157376)
---Alexandre Hamila (20181634)
---Louis Lalonde (20162457)
+BEGIN;
 
-begin transaction;
+drop schema if exists football cascade;
+create schema football;
 
+<<<<<<< HEAD
 drop schema if exists football cascade;
 create schema football;
 set search_path to football;
@@ -141,3 +140,12 @@ INSERT INTO CoupeDuMonde VALUES (1978, "Argentina", 1978-06-01, 1978-06-25);
 
 commit;
 rollback;
+=======
+drop table if exists student;
+
+CREATE TABLE student (id INTEGER,txt_firstname VARCHAR(255),txt_lastname VARCHAR(255),num_roll INTEGER,txt_standard VARCHAR(255));
+INSERT INTO student VALUES (12, 'David', 'Lalonde', 999, 'pgpsql');
+INSERT INTO student VALUES (12, 'Louis', 'Lalonde', 888, 'pgpsql');
+
+COMMIT;
+>>>>>>> main

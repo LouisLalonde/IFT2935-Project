@@ -1,6 +1,5 @@
 package com.football.api;
 import com.football.api.controller.DataBaseController;
-import com.football.api.controller.DataComputationController;
 import com.football.api.controller.QueryBuilderController;
 
 /**
@@ -17,10 +16,6 @@ public class Index {
 
     public QueryBuilderController appUseQueryBuilder(){
         return new QueryBuilderController();
-    }
-    
-    public DataComputationController appUseDataComputation(){
-        return new DataComputationController();
     }
 
     public void startApi(){
