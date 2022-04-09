@@ -3,7 +3,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.football.api.models.DatabaseModel;
 import com.football.api.models.QueryModel;
 import com.football.api.models.ResponseModel;
-import com.football.webapp.WEB_INF.classes.Student;
+import com.football.webapp.WEB_INF.classes.*;
 import com.football.api.models.DataBindModel;
 import java.util.ArrayList;
 import java.util.HashMap;

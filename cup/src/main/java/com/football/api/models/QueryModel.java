@@ -14,15 +14,11 @@ public class QueryModel {
      * @param queryData
      * @return
      */
-    public Student create(HashMap<String, String> queryData){
+    public Object create(HashMap<String, String> queryData){
         // Constructors
-        Student student = new Student();
+        Create create = new Create();
         // Logic
-        student.setFirstName("Jason");
-        student.setLastName("Roy");
-        student.setRoll(01);
-        student.setStandard("A");
-        return student;
+        return "";
     }
 
     /**
@@ -37,7 +33,7 @@ public class QueryModel {
         switch(queryNumber) {
             case "1":
             // Query 1
-              return "SELECT * FROM STUDENT";
+              return "SELECT * FROM coupedumonde";
             case "2":
             // Query 2
               return "";

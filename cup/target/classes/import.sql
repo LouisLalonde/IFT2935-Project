@@ -1,5 +1,8 @@
 BEGIN;
 
+drop database if exists football;
+create database football;
+
 drop schema if exists football cascade;
 create schema football;
 
@@ -134,7 +137,7 @@ INSERT INTO CoupeDuMonde VALUES (1954, 'Switzerland', '1954-06-16', '1954-07-04'
 INSERT INTO CoupeDuMonde VALUES (1958, 'Sweden', '1958-06-08', '1958-06-29');
 INSERT INTO CoupeDuMonde VALUES (1962, 'Chile', '1962-05-30', '1962-06-17');
 INSERT INTO CoupeDuMonde VALUES (1966, 'England', '1966-06-11', '1934-06-30');
-INSERT INTO CoupeDuMonde VALUES (1970, 'Mexico', '1970-04-31', '1970-06-21');
+INSERT INTO CoupeDuMonde VALUES (1970, 'Mexico', '1970-05-31', '1970-06-21');
 INSERT INTO CoupeDuMonde VALUES (1974, 'Germany', '1974-06-13', '1974-07-07');
 INSERT INTO CoupeDuMonde VALUES (1978, 'Argentina', '1978-06-01', '1978-06-25');
 

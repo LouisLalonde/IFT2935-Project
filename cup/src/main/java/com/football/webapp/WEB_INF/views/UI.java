@@ -1,10 +1,10 @@
 package com.football.webapp.WEB_INF.views;
 import java.util.ArrayList;
 import java.util.HashMap;
-import com.football.webapp.WEB_INF.classes.Student;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.football.api.models.DatabaseModel;
 import com.football.api.services.DataBase.Operation;
+import com.football.webapp.WEB_INF.classes.CoupeDuMonde;
 import com.football.webapp.WEB_INF.services.UserService;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -16,12 +16,10 @@ import javafx.scene.layout.Region;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import javafx.scene.control.Alert.AlertType;
  
 public class UI extends Application {
-    SessionFactory factory =  DatabaseModel.buildSessionFactory();
-    Session session = factory.openSession();
+    private static Session session;
     
     @Override
     public void start(Stage primaryStage) {
@@ -34,27 +32,23 @@ public class UI extends Application {
             public void handle(ActionEvent event) {
             UserService userService = new UserService();
             try {
-                // Testing the creation of a student in the data base 
-                userService.appUseServices().appUseDataBase().dataBaseService().executeQuery(session,
-                Operation.CREATE, new HashMap<String, String>() {{
-                    put("", "");
-                }});
                 HashMap<String, Object> res =  userService.appUseServices().appUseDataBase().dataBaseService().executeQuery(
                     session, Operation.READ, new HashMap<String, String>() {{
                     put("queryNumber", "1");
-                    put("mapCalss", "com.football.webapp.WEB_INF.classes.Student");
+                    put("mapCalss", "com.football.webapp.WEB_INF.classes.CoupeDuMonde");
                 }});
                 String jsonObjects = (String) res.get("body");
                 // Converting the json objects to the given class
-                ArrayList<Student> students = userService.appUseServices().appUseDataBase().dataBindService().DataBindModel().deserialize(jsonObjects, Student.class);
+                ArrayList<CoupeDuMonde> coupeDuMondes = userService.appUseServices().appUseDataBase().dataBindService().DataBindModel().deserialize(jsonObjects, CoupeDuMonde.class);
                 a.setAlertType(AlertType.CONFIRMATION);
                 StringBuilder display = new StringBuilder();
-                for (Student student : students) {
+                for (CoupeDuMonde coupe : coupeDuMondes) {
                     display.append(
                         "( " + 
-                        student.getId() + " ; " +
-                        student.getFirstName() + " ; " +
-                        student.getLastName() +
+                        coupe.getPays_Coupe() + " ; " +
+                        coupe.getAnnee() + " ; " +
+                        coupe.getStart_Date() + " ; " +
+                        coupe.getEnd_date() +
                         " ), "
                     );
                   }
@@ -73,11 +67,12 @@ public class UI extends Application {
 
  Scene scene = new Scene(root, 1000, 1000);
 
-        primaryStage.setTitle("Hello World!");
+        primaryStage.setTitle("Football");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
- public static void main(String[] args) {
+ public static void main(String[] args, Session hibernateSession) {
+        session = hibernateSession;
         launch(args);
     }
 }

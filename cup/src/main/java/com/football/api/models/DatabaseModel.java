@@ -17,7 +17,7 @@ public class DatabaseModel {
 	 * @return
 	 */
 	public static SessionFactory buildSessionFactory() {
-        return new Configuration().configure(hibernateCFG).buildSessionFactory();
+        return new Configuration().configure().buildSessionFactory();
     }
 
 	/**

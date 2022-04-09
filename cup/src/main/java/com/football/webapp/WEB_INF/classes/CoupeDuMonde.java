@@ -1,11 +1,11 @@
 package com.football.webapp.WEB_INF.classes;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-import org.hibernate.annotations.GenericGenerator;
+import jakarta.persistence.Table;
 
-@Entity(name = "CoupeDuMonde")
+@Entity
+@Table(name = "coupedumonde", schema = "football")
 public class CoupeDuMonde {
     @Id
     @Column(name = "Annee")
