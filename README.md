@@ -73,11 +73,7 @@ Git clone the repository
    ```sh
    git clone https://github.com/LouisLalonde/IFT2935-Project.git
    ```
-2. Create a config.properties file at the following path : 
-  ```sh
-  nano football/src/main/resources/config/config.properties
-  ```
-  
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
