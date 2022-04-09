@@ -7,6 +7,7 @@ create schema football;
 drop schema if exists football cascade;
 create schema football;
 set search_path to football;
+GRANT ALL PRIVILEGES ON DATABASE football TO postgres;
 
 CREATE TABLE CoupeDuMonde (
     Annee int PRIMARY KEY,
