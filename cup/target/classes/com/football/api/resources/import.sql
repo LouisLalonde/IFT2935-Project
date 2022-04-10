@@ -235,7 +235,7 @@ INSERT INTO Joueur Values('Houston','Macaulay','1907-08-05',86,6,21,'défensive_
 INSERT INTO Joueur Values('Kennedy','Olga','1908-05-02',87,10,44,'centre_derrière');
 INSERT INTO Joueur Values('Dixon','Alan','1908-03-07',88,8,26,'attaquant_milieu');
 INSERT INTO Joueur Values('Oliver','Carol','1907-06-04',89,4,74,'défensive_milieu');
-INSERT INTO Joueur Values('Ortiz','Zena','1903-02-27',90,6,46,'milieu_avant');
+INSERT INTO Joueur Values('Ortiz','Zena','1903-02-27',90,6,46,'milieu_centre');
 INSERT INTO Joueur Values('Roman','Destiny','1902-09-04',91,9,31,'milieu_avant');
 INSERT INTO Joueur Values('Butler','Brandon','1905-05-27',92,8,10,'milieu_gauche');
 INSERT INTO Joueur Values('Donaldson','Celeste','1905-12-27',93,4,2,'gardien');
@@ -270,7 +270,7 @@ INSERT INTO Type_Arbitre VALUES (4,'Arbitre_Assistant_3');
 --Arbitre[Prenom, Nom, Date_Naissance, ID_Arbitre, #ID_Type_Arbitre] 
 INSERT INTO Arbitre VALUES('Bruce','Doris','1902-10-22',1,3);
 INSERT INTO Arbitre VALUES('Atkins','Upton','1904-02-22',2,4);
-INSERT INTO Arbitre VALUES('Wood','Echo','1901-04-27',3,1);
+INSERT INTO Arbitre VALUES('Clement','Turpin','1901-04-27',3,1);
 INSERT INTO Arbitre VALUES('Mayo','Kelly','1902-11-26',4,4);
 INSERT INTO Arbitre VALUES('Rose','Kaye','1901-07-13',5,2);
 INSERT INTO Arbitre VALUES('Valenzuela','Daria','1906-09-11',6,4);
@@ -302,6 +302,7 @@ INSERT INTO Match VALUES (7, 3, 5, 3, 8, 1, 6, 51, '1966', 'Nestle', 'Quarts de 
 INSERT INTO Match VALUES (8, 4, 8, 3, 5, 10, 6, 89, '1970', 'Kelloggs', 'Demi-finale', '4-3', 90);
 INSERT INTO Match VALUES (9, 3, 9, 3, 8, 9, 2, 24, '1974', 'Twitter', 'Qualification', '2-0', 90);
 INSERT INTO Match VALUES (10, 6, 10, 3, 8, 9, 2, 74, '1978', 'Unilever', 'Qualification', '6-1', 90);
+INSERT INTO Match VALUES (11, 6, 5, 3, 8, 9, 2, 74, '1978', 'Unilever', 'Quarts de finale', '3-1', 90);
 
 
 --Type_But[ID_Type_But,Nom_Type_But] 
@@ -320,10 +321,12 @@ INSERT INTO But VALUES (3, 5, 41, 3, '00:43:05', 1);
 INSERT INTO But VALUES (4, 11, 71, 4, '01:06:48', 4);
 INSERT INTO But VALUES (5, 9, 47, 5, '01:01:32', 6);
 INSERT INTO But VALUES (6, 1, 42, 6, '00:36:41', 2);
-INSERT INTO But VALUES (7, 8, 51, 7, '00:49:05', 2);
+INSERT INTO But VALUES (7, 8, 24, 7, '00:49:05', 2);
 INSERT INTO But VALUES (8, 6, 89, 8, '00:30:34', 1);
 INSERT INTO But VALUES (9, 4, 24, 9, '00:21:40', 3);
 INSERT INTO But VALUES (10, 56, 74, 10, '00:09:23', 3);
+INSERT INTO But VALUES (11, 8, 74, 11, '00:14:33', 4);
+INSERT INTO But VALUES (12, 8, 90, 11, '00:14:33', 5);
 
 
 --Type_Sanction[ID_Type_Sanction, Nom_Type_Sanction]
@@ -333,13 +336,12 @@ INSERT INTO Type_Sanction VALUES (3, 'Carton Rouge');
 
 
 --Sanction[ID_Sanction, #ID_Joueur, #ID_Arbitre, #ID_Match, Timestamp, #ID_Type_Sanction] 
-
 INSERT INTO Sanction VALUES (1, 69, 1, 1, '00:25:02', 2);
 INSERT INTO Sanction VALUES (2, 38, 4, 2, '00:59:10', 1);
 INSERT INTO Sanction VALUES (3, 27, 7, 3, '00:47:07', 1);
-INSERT INTO Sanction VALUES (4, 12, 3, 4, '01:06:49', 2);
+INSERT INTO Sanction VALUES (4, 12, 1, 4, '01:06:49', 2);
 INSERT INTO Sanction VALUES (5, 79, 10, 5, '00:45:43', 1);
-INSERT INTO Sanction VALUES (6, 35, 4, 6, '01:17:52', 2);
+INSERT INTO Sanction VALUES (6, 35, 1, 6, '01:17:52', 2);
 INSERT INTO Sanction VALUES(7, 53, 6, 7, '00:36:41', 1);
 INSERT INTO Sanction VALUES (8, 55, 5, 8, '00:29:30', 2);
 INSERT INTO Sanction VALUES (9, 69, 2, 9, '00:55:42', 3);
