@@ -1,9 +1,9 @@
 package com.football.api.services;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.football.api.models.DatabaseModel;
-import com.football.api.models.QueryModel;
+import com.football.api.models.QueryBuilderModel;
 import com.football.api.models.ResponseModel;
-import com.football.webapp.WEB_INF.classes.Student;
+import com.football.webapp.WEB_INF.classes.CoupeDuMonde;
 import com.football.api.models.DataBindModel;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -35,7 +35,7 @@ public class DataBase {
     public HashMap<String, Object> executeQuery(Session session, Operation operation, HashMap<String, String> queryData) throws JsonProcessingException{
         // Constructors
         ResponseModel responseModel = new ResponseModel();
-        QueryModel queryModel = new QueryModel();
+        QueryBuilderModel queryModel = new QueryBuilderModel();
         // Data
         // Logic
         // Beginning the connection
@@ -60,10 +60,9 @@ public class DataBase {
             case READ:
                 try {
                     String queryNumber = queryData.get("queryNumber");
-                    Class mapCalss = Class.forName(queryData.get("mapCalss"));
-
+                    Class mapClass = Class.forName(queryData.get("mapClass"));
                     String readQuery =  queryModel.read(queryNumber);
-                    Query query = session.createNativeQuery(readQuery, mapCalss);
+                    Query query = session.createNativeQuery(readQuery, mapClass);
                     ArrayList<Object> objects = (ArrayList<Object>) query.list();
                     // Serializing the return objects
                     String serialized = DataBindModel.serialize(objects);

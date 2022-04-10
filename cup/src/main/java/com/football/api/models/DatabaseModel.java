@@ -8,7 +8,6 @@ import org.hibernate.cfg.Configuration;
  * Provides data processing logic for the DataBase service
  */
 public class DatabaseModel {
-	private static String hibernateCFG = "com/football/api/resources/hibernate.cfg.xml";
 
 	public DatabaseModel(){}
 	
@@ -17,7 +16,7 @@ public class DatabaseModel {
 	 * @return
 	 */
 	public static SessionFactory buildSessionFactory() {
-        return new Configuration().configure(hibernateCFG).buildSessionFactory();
+        return new Configuration().configure().buildSessionFactory();
     }
 
 	/**

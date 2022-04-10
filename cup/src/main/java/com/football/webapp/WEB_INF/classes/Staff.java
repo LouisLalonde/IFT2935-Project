@@ -3,9 +3,12 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import java.sql.Date;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity(name = "Staff")
+@Table(name = "Staff", schema = "football")
 public class Staff extends Personne{
     @GenericGenerator(name = "generator", strategy = "increment")
     @Id
@@ -16,9 +19,14 @@ public class Staff extends Personne{
     private Integer ID_Equipe;
     @Column(name = "Anciennete")
     private Integer Anciennete;
-    
 
-    public Staff(String Prenom, String Nom, String Date_Naissance, Integer ID_Staff, Integer ID_Equipe, Integer Anciennete) {
+    public Staff(){}
+    
+    public Staff(String Prenom, String Nom, Date Date_Naissance) {
+        super(Prenom, Nom, Date_Naissance);
+    }
+
+    public Staff(String Prenom, String Nom, Date Date_Naissance, Integer ID_Staff, Integer ID_Equipe, Integer Anciennete) {
         super(Prenom, Nom, Date_Naissance);
         this.ID_Staff = ID_Staff;
         this.ID_Equipe = ID_Equipe;

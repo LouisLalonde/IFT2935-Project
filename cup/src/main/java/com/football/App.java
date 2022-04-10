@@ -1,20 +1,28 @@
 package com.football;
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import com.football.api.services.DataBase.Operation;
+import com.football.webapp.WEB_INF.classes.Joueur;
 import com.football.webapp.WEB_INF.services.UserService;
-import com.football.webapp.WEB_INF.views.UI;
+import com.football.webapp.WEB_INF.views.Home;
+import com.football.webapp.WEB_INF.views.LayoutSample;
+
+import org.hibernate.Session;
 
 /**
  * Main class for the App.
  */
 public class App {
 
-    public static void frontEnd(String[] args){
+    public static void frontEnd(String[] args, Session session){
         // Front-end logic goes here.
-        UI.main(args);
+        LayoutSample.main(args, session);
     }
 
-    public static void backEnd(UserService userService){
+    public static Session backEnd(UserService userService){
         // Starting the back-end
-        userService.appUseServices().startApi();
+        return userService.appUseServices().startApi();
     }
 
     public static void main(String[] args) throws Exception {
@@ -23,9 +31,9 @@ public class App {
         // Data
         // Logic
         // Starting the back-end API
-        backEnd(userService);
+        Session session = backEnd(userService);
         // Starting the front-end
-        frontEnd(args);
+        frontEnd(args, session);
     }
 }
 

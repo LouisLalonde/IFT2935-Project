@@ -1,11 +1,14 @@
 package com.football.webapp.WEB_INF.classes;
+import java.sql.Date;
+import org.hibernate.annotations.GenericGenerator;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-import org.hibernate.annotations.GenericGenerator;
+import jakarta.persistence.Table;
 
-@Entity(name = "Personne")
+@Entity(name = "Joueur")
+@Table(name = "Joueur", schema = "football")
 public class Joueur extends Personne {
     @GenericGenerator(name = "generator", strategy = "increment")
     @Id
@@ -19,8 +22,9 @@ public class Joueur extends Personne {
     @Column(name = "Poste")
     private String Poste;
 
-
-    public Joueur(String Prenom, String Nom, String Date_Naissance, Integer ID_Joueur, Integer ID_Equipe, Integer Numero, String Poste) {
+    public Joueur(){}
+    
+    public Joueur(String Prenom, String Nom, Date Date_Naissance, Integer ID_Joueur, Integer ID_Equipe, Integer Numero, String Poste) {
         super(Prenom, Nom, Date_Naissance);
         this.ID_Joueur = ID_Joueur;
         this.ID_Equipe = ID_Equipe;

@@ -3,24 +3,26 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity(name = "Equipe")
+@Table(name = "Equipe", schema = "football")
 public class Equipe {
     @GenericGenerator(name = "generator", strategy = "increment")
     @Id
     @GeneratedValue(generator = "generator")
     @Column(name = "ID_Equipe")
     private Integer ID_Equipe;
-    @Column(name = "Annee")
-    private String Annee;
     @Column(name = "Pays_Equipe")
     private String Pays_Equipe;
 
 
-    public Equipe(Integer ID_Equipe, String Annee, String Pays_Equipe) {
+    public Equipe(){}
+
+
+    public Equipe(Integer ID_Equipe, String Pays_Equipe) {
         this.ID_Equipe = ID_Equipe;
-        this.Annee = Annee;
         this.Pays_Equipe = Pays_Equipe;
     }
 
@@ -31,14 +33,6 @@ public class Equipe {
 
     public void setID_Equipe(Integer ID_Equipe) {
         this.ID_Equipe = ID_Equipe;
-    }
-
-    public String getAnnee() {
-        return this.Annee;
-    }
-
-    public void setAnnee(String Annee) {
-        this.Annee = Annee;
     }
 
     public String getPays_Equipe() {

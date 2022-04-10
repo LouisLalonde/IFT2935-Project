@@ -1,28 +1,23 @@
 package com.football.api.models;
 import java.util.HashMap;
 import com.football.api.models.CrudOperators.*;
-import com.football.webapp.WEB_INF.classes.Student;
 /**
  * Provides data logic processing for the QueryBuilder service
  */
-public class QueryModel {
+public class QueryBuilderModel {
 
-    public QueryModel(){};
+    public QueryBuilderModel(){};
 
     /**
      * 
      * @param queryData
      * @return
      */
-    public Student create(HashMap<String, String> queryData){
+    public Object create(HashMap<String, String> queryData){
         // Constructors
-        Student student = new Student();
+        Create create = new Create();
         // Logic
-        student.setFirstName("Jason");
-        student.setLastName("Roy");
-        student.setRoll(01);
-        student.setStandard("A");
-        return student;
+        return "";
     }
 
     /**
@@ -37,10 +32,10 @@ public class QueryModel {
         switch(queryNumber) {
             case "1":
             // Query 1
-              return "SELECT * FROM STUDENT";
+              return "SELECT * FROM football.coupedumonde;";
             case "2":
             // Query 2
-              return "";
+              return "SELECT * FROM football.joueur;";
             case "3":
             // Query 3
                 return "";
