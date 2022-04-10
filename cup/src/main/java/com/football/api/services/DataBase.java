@@ -1,7 +1,7 @@
 package com.football.api.services;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.football.api.models.DatabaseModel;
-import com.football.api.models.QueryModel;
+import com.football.api.models.QueryBuilderModel;
 import com.football.api.models.ResponseModel;
 import com.football.webapp.WEB_INF.classes.CoupeDuMonde;
 import com.football.api.models.DataBindModel;
@@ -35,7 +35,7 @@ public class DataBase {
     public HashMap<String, Object> executeQuery(Session session, Operation operation, HashMap<String, String> queryData) throws JsonProcessingException{
         // Constructors
         ResponseModel responseModel = new ResponseModel();
-        QueryModel queryModel = new QueryModel();
+        QueryBuilderModel queryModel = new QueryBuilderModel();
         // Data
         // Logic
         // Beginning the connection

@@ -5,8 +5,10 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity(name = "CoupeDuMonde")
+@Table(name = "CoupeDuMonde", schema = "football")
 public class CoupeDuMonde {
     @GenericGenerator(name = "generator", strategy = "increment")
     @Id
@@ -20,7 +22,7 @@ public class CoupeDuMonde {
     @Column(name = "End_date")
     private Date End_date;
 
-    public CoupeDuMonde() {}    
+    public CoupeDuMonde(){}    
 
     public CoupeDuMonde(Integer Annee, String Pays_Coupe, Date Start_Date, Date End_date) {
         this.Annee = Annee;

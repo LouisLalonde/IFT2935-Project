@@ -5,8 +5,10 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity(name = "Blessure")
+@Table(name = "Blessure", schema = "football")
 public class Blessure {
     @GenericGenerator(name = "generator", strategy = "increment")
     @Id
@@ -20,6 +22,7 @@ public class Blessure {
     @Column(name = "Date")
     private Date Date;
 
+    public Blessure(){}
 
     public Blessure(Integer ID_Blessure, Integer ID_Joueur, String Diagnostic, Date Date) {
         this.ID_Blessure = ID_Blessure;

@@ -5,8 +5,10 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity(name = "But")
+@Table(name = "But", schema = "football")
 public class But {
     @GenericGenerator(name = "generator", strategy = "increment")
     @Id
@@ -24,6 +26,8 @@ public class But {
     @Column(name = "ID_Type_But")
     private Integer ID_Type_But;
 
+
+    public But() {}
 
     public But(Integer ID_But, Integer Gardien, Integer Buteur, Integer ID_Match, Time Temps, Integer ID_Type_But) {
         this.ID_But = ID_But;

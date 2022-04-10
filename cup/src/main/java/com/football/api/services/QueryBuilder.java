@@ -1,5 +1,5 @@
 package com.football.api.services;
-import com.football.api.models.QueryModel;
+import com.football.api.models.QueryBuilderModel;
 /**
  * Handles the different queries operations
  */
@@ -9,13 +9,12 @@ public class QueryBuilder {
 
     public QueryBuilder(){};
 
-    public QueryModel QueryModel(){
-        return new QueryModel();
+    public QueryBuilderModel QueryModel(){
+        return new QueryBuilderModel();
     }
 
     public String main(String query){
         return "";
     }
-
 
 }

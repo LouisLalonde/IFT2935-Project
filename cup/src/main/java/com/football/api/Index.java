@@ -20,7 +20,7 @@ public class Index {
     public QueryBuilderController appUseQueryBuilder(){
         return new QueryBuilderController();
     }
-
+    
     public Session startApi(){
         SessionFactory factory =  DatabaseModel.buildSessionFactory();
         Session session = factory.openSession();

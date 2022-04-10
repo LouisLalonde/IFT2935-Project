@@ -1,13 +1,13 @@
 package com.football.webapp.WEB_INF.classes;
-import java.sql.Date;
 import org.hibernate.annotations.GenericGenerator;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-/**
- * 
- */
+import jakarta.persistence.Table;
+
+@Entity(name = "Match")
+@Table(name = "Match", schema = "football")
 public class Match {
     @GenericGenerator(name = "generator", strategy = "increment")
     @Id
@@ -28,8 +28,8 @@ public class Match {
     private Integer Arbitre_Assistant_3;
     @Column(name = "MVP")
     private Integer MVP;
-    @Column(name = "Date")
-    private Date Date;
+    @Column(name = "Annee")
+    private Integer Annee;
     @Column(name = "Stade")
     private String Stade;
     @Column(name = "Rang")
@@ -39,9 +39,12 @@ public class Match {
     @Column(name = "Duree")
     private Integer Duree;
 
+    public Match(){}
+
 
     public Match(Integer ID_Match, Integer Equipe_Gagnante, Integer Equipe_Perdante, Integer Arbitre,
-     Integer Arbitre_Assistant_1, Integer Arbitre_Assistant_2, Integer Arbitre_Assistant_3, Integer MVP, Date Date, String Stade, String Rang, String Score, Integer Duree) {
+     Integer Arbitre_Assistant_1, Integer Arbitre_Assistant_2, Integer Arbitre_Assistant_3, Integer MVP,
+      Integer Annee, String Stade, String Rang, String Score, Integer Duree) {
         this.ID_Match = ID_Match;
         this.Equipe_Gagnante = Equipe_Gagnante;
         this.Equipe_Perdante = Equipe_Perdante;
@@ -50,7 +53,7 @@ public class Match {
         this.Arbitre_Assistant_2 = Arbitre_Assistant_2;
         this.Arbitre_Assistant_3 = Arbitre_Assistant_3;
         this.MVP = MVP;
-        this.Date = Date;
+        this.Annee = Annee;
         this.Stade = Stade;
         this.Rang = Rang;
         this.Score = Score;
@@ -122,12 +125,12 @@ public class Match {
         this.MVP = MVP;
     }
 
-    public Date getDate() {
-        return this.Date;
+    public Integer getAnnee() {
+        return this.Annee;
     }
 
-    public void setDate(Date Date) {
-        this.Date = Date;
+    public void setAnnee(Integer Annee) {
+        this.Annee = Annee;
     }
 
     public String getStade() {
@@ -161,5 +164,5 @@ public class Match {
     public void setDuree(Integer Duree) {
         this.Duree = Duree;
     }
-
+    
 }

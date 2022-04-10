@@ -1,21 +1,39 @@
 package com.football.webapp.WEB_INF.classes;
 import java.sql.Time;
+import org.hibernate.annotations.GenericGenerator;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
+@Entity(name = "Sanction")
+@Table(name = "Sanction", schema = "football")
 public class Sanction {
+    @GenericGenerator(name = "generator", strategy = "increment")
+    @Id
+    @GeneratedValue(generator = "generator")
+    @Column(name = "ID_Sanction")
     private Integer ID_Sanction;
+    @Column(name = "ID_Joueur")
     private Integer ID_Joueur;
+    @Column(name = "ID_Arbitre")
     private Integer ID_Arbitre;
+    @Column(name = "ID_Match")
     private Integer ID_Match;
-    private Time Time;
+    @Column(name = "Temps")
+    private Time Temps;
+    @Column(name = "ID_Type_Sanction")
     private Integer ID_Type_Sanction;
 
+    public Sanction(){}
 
-    public Sanction(Integer ID_Sanction, Integer ID_Joueur, Integer ID_Arbitre, Integer ID_Match, Time Time, Integer ID_Type_Sanction) {
+    public Sanction(Integer ID_Sanction, Integer ID_Joueur, Integer ID_Arbitre, Integer ID_Match, Time Temps, Integer ID_Type_Sanction) {
         this.ID_Sanction = ID_Sanction;
         this.ID_Joueur = ID_Joueur;
         this.ID_Arbitre = ID_Arbitre;
         this.ID_Match = ID_Match;
-        this.Time = Time;
+        this.Temps = Temps;
         this.ID_Type_Sanction = ID_Type_Sanction;
     }
 
@@ -53,11 +71,11 @@ public class Sanction {
     }
 
     public Time getTime() {
-        return this.Time;
+        return this.Temps;
     }
 
     public void setTime(Time Time) {
-        this.Time = Time;
+        this.Temps = Time;
     }
 
     public Integer getID_Type_Sanction() {

@@ -3,8 +3,9 @@ import java.sql.Date;
 import jakarta.persistence.Column;
 import jakarta.persistence.Inheritance;
 import jakarta.persistence.InheritanceType;
+import jakarta.persistence.MappedSuperclass;
 
-@Inheritance(strategy = InheritanceType.JOINED)
+@MappedSuperclass
 public abstract class Personne {
     @Column(name = "Prenom")
     private String Prenom;
@@ -12,6 +13,8 @@ public abstract class Personne {
     private String Nom;
     @Column(name = "Date_Naissance")
     private Date Date_Naissance;
+
+    public Personne(){}
 
     public Personne(String Prenom, String Nom, Date Date_Naissance) {
         this.Prenom = Prenom;
