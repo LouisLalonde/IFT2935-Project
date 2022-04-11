@@ -1,12 +1,15 @@
 package com.football.api.models;
 import java.util.HashMap;
 
+/**
+ * Provides data logic for the ResponseService
+ */
 public class ResponseModel {
     
     /**
-     * 
+     * Generate an object for when the response is successfull
      * @param payload
-     * @return
+     * @return HashMap<String, Object>
      */
     public HashMap<String, Object> success(Object payload){
         HashMap<String, Object> res = new HashMap<>();
@@ -16,9 +19,9 @@ public class ResponseModel {
     }
 
     /**
-     * 
+     * Generate an object for when the response is unsuccessfull
      * @param payload
-     * @return
+     * @return HashMap<String, Object>
      */
     public HashMap<String, Object> error(Object payload){
         HashMap<String, Object> res = new HashMap<>();

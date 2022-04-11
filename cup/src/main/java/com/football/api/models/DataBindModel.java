@@ -3,13 +3,15 @@ import java.util.ArrayList;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
+import com.football.webapp.WEB_INF.classes.entities.Joueur;
 
 public class DataBindModel {
     
     /**
      * 
-     * @param data
-     * @return
+     * @param data ArrayList containing objects to be serialized
+     * @return dumped json object
      * @throws JsonProcessingException
      */
     public static String serialize(ArrayList<Object> data) throws JsonProcessingException{
@@ -22,13 +24,12 @@ public class DataBindModel {
     /**
      * 
      * @param <T>
-     * @param data
-     * @param classType
-     * @return
+     * @param data json dumped data
+     * @param classType Class type value
+     * @return ArrayList containing generic data type
      * @throws JsonProcessingException
      */
-    public <T> ArrayList<T> deserialize(String data, Class classType) throws JsonProcessingException{
-          // We could use a mapping function.
+    public static <T> ArrayList<T> deserialize(String data, Class classType) throws JsonProcessingException{
           ObjectMapper mapper = new ObjectMapper(); 
           JavaType type = mapper.getTypeFactory().constructCollectionType(ArrayList.class, classType);
           return mapper.readValue(data, type);

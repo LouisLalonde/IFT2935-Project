@@ -1,4 +1,6 @@
 package com.football.api;
+import java.util.HashMap;
+
 import com.football.api.controller.DataBaseController;
 import com.football.api.controller.QueryBuilderController;
 import com.football.api.models.DatabaseModel;
@@ -9,12 +11,18 @@ import org.hibernate.SessionFactory;
  * Main class for the API
  */
 public class Index {
-    String port = "3080";
-    
+    private String port = "3080";
+    private HashMap<String, Object> data;
+
     public Index(){};
 
+    public Index(HashMap<String, Object> data){
+        this.data = data;
+    }
+    
+
     public DataBaseController appUseDataBase(){
-        return new DataBaseController();
+        return new DataBaseController(data);
     }
 
     public QueryBuilderController appUseQueryBuilder(){
