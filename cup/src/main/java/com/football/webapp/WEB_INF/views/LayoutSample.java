@@ -87,7 +87,7 @@ public class LayoutSample extends Application {
  
         Scene scene = new Scene(border);
         stage.setScene(scene);
-        stage.setTitle("Layout Sample");
+        stage.setTitle("Projet du cours IFT 2935");
         stage.show();
     }
  
@@ -102,10 +102,10 @@ public class LayoutSample extends Application {
         hbox.setSpacing(10);   // Gap between nodes
         hbox.setStyle("-fx-background-color: #336699;");
  
-        Button buttonCurrent = new Button("Query 1");
-        buttonCurrent.setPrefSize(100, 20);
+        Button button1 = new Button("Query 1");
+        button1.setPrefSize(100, 20);
     
-        buttonCurrent.setOnAction(new EventHandler<ActionEvent>() {
+        button1.setOnAction(new EventHandler<ActionEvent>() {
         Alert a = new Alert(AlertType.NONE);
             @Override
             public void handle(ActionEvent event) {
@@ -138,14 +138,22 @@ public class LayoutSample extends Application {
         }  
     });
  
-    Button buttonProjected = new Button("Query 2");
-    buttonProjected.setPrefSize(100, 20);
+    Button button2 = new Button("Query 2");
+    button2.setPrefSize(100, 20);
+
     
-    hbox.getChildren().addAll(buttonCurrent, buttonProjected);
+    Button button3= new Button("Query 3");
+    button3.setPrefSize(100, 20);
+
+    Button button4= new Button("Query 4");
+    button4.setPrefSize(100, 20);
+
+
+    hbox.getChildren().addAll(button1, button2, button3, button4);
     
         return hbox;
     }
-    
+
 /*
  * Creates a VBox with a list of links for the left region
  */
