@@ -98,7 +98,7 @@ CREATE TABLE But (
     FOREIGN KEY (Buteur) REFERENCES Joueur(ID_Joueur), 
     ID_Match int,
     FOREIGN KEY (ID_Match) REFERENCES Match(ID_Match),
-    Timestamp time,
+    Temps time,
     ID_Type_But int,
     FOREIGN KEY (ID_Type_But) REFERENCES Type_But(ID_Type_But)
 );
@@ -116,7 +116,7 @@ CREATE TABLE Sanction (
     FOREIGN KEY (ID_Arbitre) REFERENCES Arbitre(ID_Arbitre), 
     ID_Match int,
     FOREIGN KEY (ID_Match) REFERENCES Match(ID_Match), 
-    Timestamp time, 
+    Temps time, 
     ID_Type_Sanction int,
     FOREIGN KEY (ID_Type_Sanction) REFERENCES Type_Sanction(ID_Type_Sanction)
 );
