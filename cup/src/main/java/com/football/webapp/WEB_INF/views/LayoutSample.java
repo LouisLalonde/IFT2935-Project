@@ -1,14 +1,11 @@
 package com.football.webapp.WEB_INF.views; 
 import java.util.ArrayList;
-import java.util.HashMap;
-
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.football.api.services.DataBase.Operation;
-import com.football.webapp.WEB_INF.classes.Joueur;
-import com.football.webapp.WEB_INF.services.UserService;
-
+import com.football.api.models.CrudOperators.Enum.Operation;
+import com.football.webapp.WEB_INF.classes.entities.CoupeDuMonde;
+import com.football.webapp.WEB_INF.classes.entities.Joueur;
+import com.football.webapp.WEB_INF.classes.utility.AbstractedReadRequest;
 import org.hibernate.Session;
-
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -112,17 +109,11 @@ public class LayoutSample extends Application {
         Alert a = new Alert(AlertType.NONE);
             @Override
             public void handle(ActionEvent event) {
-            UserService userService = new UserService();
             try {
-                HashMap<String, Object> res =  userService.appUseServices().appUseDataBase().dataBaseService().executeQuery(
-                    session, Operation.READ, new HashMap<String, String>() {{
-                    put("queryNumber", "2");
-                    put("mapClass", "com.football.webapp.WEB_INF.classes.Joueur");
-                }});
-                String jsonObjects = (String) res.get("body");
-                // Converting the json objects to the given class
-                ArrayList<Joueur> joueurs = userService.appUseServices().appUseDataBase()
-                .dataBindService().DataBindModel().deserialize(jsonObjects, Joueur.class);
+                ArrayList<Joueur> joueurs = new AbstractedReadRequest().execute(session, Operation.READ, "2", Joueur.class);
+                ArrayList<CoupeDuMonde> coupeDuMondes = new AbstractedReadRequest().execute(session, Operation.READ, "1", CoupeDuMonde.class);
+
+
                 a.setAlertType(AlertType.CONFIRMATION);
                 StringBuilder display = new StringBuilder();
                 

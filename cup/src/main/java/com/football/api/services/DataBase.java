@@ -3,44 +3,41 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.football.api.models.DatabaseModel;
 import com.football.api.models.QueryBuilderModel;
 import com.football.api.models.ResponseModel;
-import com.football.webapp.WEB_INF.classes.CoupeDuMonde;
+import com.football.api.models.CrudOperators.Enum.Operation;
 import com.football.api.models.DataBindModel;
 import java.util.ArrayList;
 import java.util.HashMap;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
+
 /**
  * Handle the different data base operations
  */
 public class DataBase {
-
-    public enum Operation {
-        CREATE,
-        READ,
-        UPDATE,
-        DELETE
-      }
+    private Session session;
+    private Operation operation;
+    private HashMap<String, String> queryData;
 
     public DataBase(){};
 
+    public DataBase(HashMap<String, Object> data) throws JsonProcessingException{
+        this.session = (Session) data.get("session");
+        this.operation = (Operation) data.get("operation");
+        this.queryData = (HashMap<String, String>) data.get("body");
+    }
+
     /**
      * 
-     * @param operation
-     * @param queryData
-     * @return
+     * @return response object containing the related parameters in terms of the response
      * @throws JsonProcessingException
      */
-    public HashMap<String, Object> executeQuery(Session session, Operation operation, HashMap<String, String> queryData) throws JsonProcessingException{
+    public HashMap<String, Object> executeQuery() throws JsonProcessingException{
         // Constructors
         ResponseModel responseModel = new ResponseModel();
         QueryBuilderModel queryModel = new QueryBuilderModel();
         // Data
         // Logic
-        // Beginning the connection
-        // SessionFactory factory =  DatabaseModel.buildSessionFactory();
-        // Session session = factory.openSession();
         Transaction transaction = DatabaseModel.buildTransaction(session);
 
         switch(operation) {

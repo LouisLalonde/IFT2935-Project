@@ -9,7 +9,7 @@ public class QueryBuilderModel {
     public QueryBuilderModel(){};
 
     /**
-     * 
+     * Build a create query
      * @param queryData
      * @return
      */
@@ -21,7 +21,7 @@ public class QueryBuilderModel {
     }
 
     /**
-     * 
+     * Build a read query
      * @param queryNumber
      * @return
      */
@@ -47,7 +47,7 @@ public class QueryBuilderModel {
     }
 
     /**
-     * 
+     * Build an update query
      * @param query
      * @return
      */
@@ -58,7 +58,7 @@ public class QueryBuilderModel {
     }
     
     /**
-     * 
+     * Build a delete query
      * @param query
      * @return
      */

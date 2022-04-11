@@ -1,4 +1,4 @@
-package com.football.webapp.WEB_INF.classes;
+package com.football.webapp.WEB_INF.classes.entities;
 import java.sql.Date;
 import org.hibernate.annotations.GenericGenerator;
 import jakarta.persistence.Column;

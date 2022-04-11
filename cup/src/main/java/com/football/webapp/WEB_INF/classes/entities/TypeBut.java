@@ -1,4 +1,4 @@
-package com.football.webapp.WEB_INF.classes;
+package com.football.webapp.WEB_INF.classes.entities;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

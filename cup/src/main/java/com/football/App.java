@@ -1,13 +1,6 @@
 package com.football;
-import java.util.ArrayList;
-import java.util.HashMap;
-
-import com.football.api.services.DataBase.Operation;
-import com.football.webapp.WEB_INF.classes.Joueur;
 import com.football.webapp.WEB_INF.services.UserService;
-import com.football.webapp.WEB_INF.views.Home;
 import com.football.webapp.WEB_INF.views.LayoutSample;
-
 import org.hibernate.Session;
 
 /**

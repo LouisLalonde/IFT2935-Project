@@ -1,4 +1,5 @@
 package com.football.api.controller;
+import java.util.HashMap;
 import com.football.api.controller.interfaces.DataHandler;
 import com.football.api.services.QueryBuilder;
 
@@ -9,7 +10,7 @@ public class QueryBuilderController implements DataHandler{
     }
     
     @Override
-    public String handle(String data){
+    public HashMap<String, Object> handle(HashMap<String, Object> data){
         // Handle the data
         return data;
     }

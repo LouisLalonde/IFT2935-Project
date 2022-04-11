@@ -12,24 +12,24 @@ public class DatabaseModel {
 	public DatabaseModel(){}
 	
 	/**
-	 * Create a session for the current request
-	 * @return
+	 * Create an hibernate session for the current request
+	 * @return SessionFactory
 	 */
 	public static SessionFactory buildSessionFactory() {
         return new Configuration().configure().buildSessionFactory();
     }
 
 	/**
-	 * 
+	 * Initiate a new transaction for the current hibernate session
 	 * @param session
-	 * @return
+	 * @return Transaction
 	 */
 	public static Transaction buildTransaction(Session session) {
 		return session.beginTransaction();
 	}
 
 	/**
-	 * 
+	 * Commit the current hibernate transaction
 	 * @param transaction
 	 */
 	public static void commitTransaction(Transaction transaction) {
@@ -37,7 +37,7 @@ public class DatabaseModel {
 	}
 
 	/**
-	 * 
+	 * End the current hibernate transaction
 	 * @param session
 	 * @param transaction
 	 */
@@ -46,6 +46,10 @@ public class DatabaseModel {
 		session.close();
 	}
 
+	/**
+	 * If needed (hibernate throws an error) rollback the current transaction
+	 * @param transaction
+	 */
 	public static void rollbackTransaction(Transaction transaction) {
 		transaction.rollback();
 	}

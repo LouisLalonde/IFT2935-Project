@@ -18,18 +18,18 @@
         <property name="show_sql">true</property>
         <property name="hibernate.hbm2ddl.auto">validate</property> 
         <!-- Annotated entity classes -->
-        <mapping class="com.football.webapp.WEB_INF.classes.Arbitre"/>
-        <mapping class="com.football.webapp.WEB_INF.classes.Blessure"/>
-        <mapping class="com.football.webapp.WEB_INF.classes.But"/>
-        <mapping class="com.football.webapp.WEB_INF.classes.CoupeDuMonde"/>
-        <mapping class="com.football.webapp.WEB_INF.classes.Equipe"/>
-        <mapping class="com.football.webapp.WEB_INF.classes.Joueur"/>
-        <mapping class="com.football.webapp.WEB_INF.classes.Match"/>
-        <mapping class="com.football.webapp.WEB_INF.classes.Sanction"/>
-        <mapping class="com.football.webapp.WEB_INF.classes.Staff"/>
-        <mapping class="com.football.webapp.WEB_INF.classes.TypeArbitre"/>
-        <mapping class="com.football.webapp.WEB_INF.classes.TypeBut"/>
-        <mapping class="com.football.webapp.WEB_INF.classes.TypeSanction"/>
+        <mapping class="com.football.webapp.WEB_INF.classes.entities.Arbitre"/>
+        <mapping class="com.football.webapp.WEB_INF.classes.entities.Blessure"/>
+        <mapping class="com.football.webapp.WEB_INF.classes.entities.But"/>
+        <mapping class="com.football.webapp.WEB_INF.classes.entities.CoupeDuMonde"/>
+        <mapping class="com.football.webapp.WEB_INF.classes.entities.Equipe"/>
+        <mapping class="com.football.webapp.WEB_INF.classes.entities.Joueur"/>
+        <mapping class="com.football.webapp.WEB_INF.classes.entities.Match"/>
+        <mapping class="com.football.webapp.WEB_INF.classes.entities.Sanction"/>
+        <mapping class="com.football.webapp.WEB_INF.classes.entities.Staff"/>
+        <mapping class="com.football.webapp.WEB_INF.classes.entities.TypeArbitre"/>
+        <mapping class="com.football.webapp.WEB_INF.classes.entities.TypeBut"/>
+        <mapping class="com.football.webapp.WEB_INF.classes.entities.TypeSanction"/>
         
     </session-factory>
 </hibernate-configuration>

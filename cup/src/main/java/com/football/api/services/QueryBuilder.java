@@ -1,5 +1,6 @@
 package com.football.api.services;
 import com.football.api.models.QueryBuilderModel;
+
 /**
  * Handles the different queries operations
  */
