@@ -44,10 +44,12 @@ On pourra inclure dans chaque entité tous les éléments réalistes possibles �
 
 
 
-### développer avec
+### Développer avec
 
 * [Java](https://www.java.com/fr/)
 * [Apache Maven](https://maven.apache.org/index.html)
+* [FasterXML](https://github.com/FasterXML/jackson)
+* [Hibernate](https://hibernate.org/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
