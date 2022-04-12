@@ -29,7 +29,7 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## À propos du projet
 
 La fédération Internationale de football souhaite créer une base de données des coupes du monde des nations depuis la création de cette
 compétition. Dans chaque coupe du monde, un nombre d’équipes se présentent, représentant chacune un pays. Chaque équipe est constituée
@@ -44,10 +44,12 @@ On pourra inclure dans chaque entité tous les éléments réalistes possibles �
 
 
 
-### Built With
+### Développer avec
 
 * [Java](https://www.java.com/fr/)
 * [Apache Maven](https://maven.apache.org/index.html)
+* [FasterXML](https://github.com/FasterXML/jackson)
+* [Hibernate](https://hibernate.org/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -63,9 +65,11 @@ Git clone the repository
 - Apache Maven 3.8.5
 - Postgresql
 - Base de données avec comme nom: football
-- Privilège tous accès à l'utilisateur: postgres
 - Mot de passe de l'utilisateur postgres: postgres
-- psql -h localhost -U postgres -d football -f import.sql
+- Exécuter le fichier d'importation : import.sql
+  ```sh
+  psql -h localhost -U postgres -d football -f import.sql
+  ```
 
 ### Installation
 
@@ -84,45 +88,23 @@ Git clone the repository
 - Cliquer sur un des 4 boutons pour exécuter une requête vers la base de données
 
 <!-- ROADMAP -->
-## Roadmap
+## Feuille de route
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+- [ ] Développer le back-end
+- [ ] Utiliser le cadre de développement Hibernate
+- [ ] Développer le front-end
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
 <!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
+## Remerciments
 
 * [Louis Lalonde - 20162457](#)
 * [Jonathan Therrien - 20157376](#)
