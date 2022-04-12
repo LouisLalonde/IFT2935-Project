@@ -99,11 +99,8 @@ Git clone the repository
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
 <!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
+## Remerciments
 
 * [Louis Lalonde - 20162457](#)
 * [Jonathan Therrien - 20157376](#)
