@@ -65,9 +65,11 @@ Git clone the repository
 - Apache Maven 3.8.5
 - Postgresql
 - Base de données avec comme nom: football
-- Privilège tous accès à l'utilisateur: postgres
 - Mot de passe de l'utilisateur postgres: postgres
-- psql -h localhost -U postgres -d football -f import.sql
+- Exécuter le fichier d'importation : import.sql
+  ```sh
+  psql -h localhost -U postgres -d football -f import.sql
+  ```
 
 ### Installation
 
