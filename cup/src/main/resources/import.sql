@@ -347,5 +347,9 @@ INSERT INTO Sanction VALUES (8, 55, 5, 8, '00:29:30', 2);
 INSERT INTO Sanction VALUES (9, 69, 2, 9, '00:55:42', 3);
 INSERT INTO Sanction VALUES (10, 87, 9, 10, '01:02:41', 2);
 INSERT INTO Sanction VALUES (11, 99, 3, 10, '01:08:41', 2);
+<<<<<<< HEAD
+=======
+
+>>>>>>> Vanessa
 
 commit;
