@@ -350,10 +350,3 @@ INSERT INTO Sanction VALUES (11, 99, 3, 10, '01:08:41', 2);
 
 
 commit;
-
-with
-R1 as (select ID_Arbitre from Arbitre where(Prenom='Clement' AND Nom='Turpin')), 
-R2 as (select id_arbitre, nom_type_sanction  from Sanction,Type_sanction where(type_sanction.id_type_sanction = sanction.id_type_sanction AND type_sanction.Nom_Type_Sanction='Carton Jaune')),
-R3 as (select ID_arbitre, nom_type_sanction from r2 natural join r1),
-R4 as (select count(nom_type_sanction) as nbr_carton_jaune from R3 group by (ID_Arbitre))
-select * from r4;
