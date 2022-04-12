@@ -1,4 +1,9 @@
 package com.football;
+import java.util.ArrayList;
+
+import com.football.api.models.CrudOperators.Enum.Operation;
+import com.football.webapp.WEB_INF.classes.entities.Arbitre;
+import com.football.webapp.WEB_INF.classes.utility.AbstractedReadRequest;
 import com.football.webapp.WEB_INF.services.UserService;
 import com.football.webapp.WEB_INF.views.LayoutSample;
 import org.hibernate.Session;
@@ -25,8 +30,10 @@ public class App {
         // Logic
         // Starting the back-end API
         Session session = backEnd(userService);
+        ArrayList<Arbitre> arbitres = new AbstractedReadRequest().execute(session, Operation.READ, "4", Arbitre.class);
+        System.out.println(arbitres.get(0).getDate_Naissance());
         // Starting the front-end
-        frontEnd(args, session);
+        //frontEnd(args, session);
     }
 }
 

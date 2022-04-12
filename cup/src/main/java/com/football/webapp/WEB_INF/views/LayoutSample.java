@@ -2,6 +2,7 @@ package com.football.webapp.WEB_INF.views;
 import java.util.ArrayList;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.football.api.models.CrudOperators.Enum.Operation;
+import com.football.webapp.WEB_INF.classes.entities.Arbitre;
 import com.football.webapp.WEB_INF.classes.entities.CoupeDuMonde;
 import com.football.webapp.WEB_INF.classes.entities.Joueur;
 import com.football.webapp.WEB_INF.classes.utility.AbstractedReadRequest;
@@ -110,24 +111,25 @@ public class LayoutSample extends Application {
             @Override
             public void handle(ActionEvent event) {
             try {
-                ArrayList<Joueur> joueurs = new AbstractedReadRequest().execute(session, Operation.READ, "2", Joueur.class);
-                ArrayList<CoupeDuMonde> coupeDuMondes = new AbstractedReadRequest().execute(session, Operation.READ, "1", CoupeDuMonde.class);
-
+                // ArrayList<Joueur> joueurs = new AbstractedReadRequest().execute(session, Operation.READ, "2", Joueur.class);
+                // ArrayList<CoupeDuMonde> coupeDuMondes = new AbstractedReadRequest().execute(session, Operation.READ, "1", CoupeDuMonde.class);
+                ArrayList<Arbitre> arbitres = new AbstractedReadRequest().execute(session, Operation.READ, "4", Arbitre.class);
+                System.out.println(arbitres.get(0).getDate_Naissance());
 
                 a.setAlertType(AlertType.CONFIRMATION);
                 StringBuilder display = new StringBuilder();
                 
-                for (Joueur joueur : joueurs) {
-                    display.append(
-                        "( " + 
-                        joueur.getPrenom() + " ; " +
-                        joueur.getPrenom() + " ; " +
-                        joueur.getDate_Naissance() + " ; " +
-                        joueur.getNumero() + " ; " +
-                        joueur.getPoste() +
-                        " ), "
-                    );
-                  }
+                // for (Joueur joueur : joueurs) {
+                //     display.append(
+                //         "( " + 
+                //         joueur.getPrenom() + " ; " +
+                //         joueur.getPrenom() + " ; " +
+                //         joueur.getDate_Naissance() + " ; " +
+                //         joueur.getNumero() + " ; " +
+                //         joueur.getPoste() +
+                //         " ), "
+                //     );
+                //   }
                 a.setContentText(display.toString());
                 a.getDialogPane().setMinHeight(Region.USE_PREF_SIZE);
                 // show the dialog

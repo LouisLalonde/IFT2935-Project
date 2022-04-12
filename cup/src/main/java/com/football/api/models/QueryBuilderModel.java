@@ -38,10 +38,15 @@ public class QueryBuilderModel {
               return "SELECT * FROM football.joueur;";
             case "3":
             // Query 3
-                return "";
+                return "with " + 
+                "R1 as (select ID_Arbitre from football.Arbitre where(Prenom='Clement' AND Nom='Turpin'))," +  
+                "R2 as (select * from football.Type_Sanction where(Nom_Type_Sanction='Carton Jaune')), " +
+                "R3 as (select * from R2 natural join football.Sanction), " +
+                "R4 as (select * from R1 natural join R3) " +
+                "select count(nom_type_sanction) from R4 group by id_arbitre;";
             case "4":
             // Query 4
-                return "";
+                return "SELECT * from football.Arbitre";
           }
         return "";
     }

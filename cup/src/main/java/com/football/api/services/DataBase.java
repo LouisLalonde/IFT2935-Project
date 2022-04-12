@@ -61,6 +61,7 @@ public class DataBase {
                     String readQuery =  queryModel.read(queryNumber);
                     Query query = session.createNativeQuery(readQuery, mapClass);
                     ArrayList<Object> objects = (ArrayList<Object>) query.list();
+                    //System.out.println(objects);
                     // Serializing the return objects
                     String serialized = DataBindModel.serialize(objects);
                     // commiting the transaction
