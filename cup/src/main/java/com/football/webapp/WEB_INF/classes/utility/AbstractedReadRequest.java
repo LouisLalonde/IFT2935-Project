@@ -4,7 +4,6 @@ import java.util.HashMap;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.football.api.models.DataBindModel;
 import com.football.api.models.CrudOperators.Enum.Operation;
-import com.football.webapp.WEB_INF.classes.utility.Enum.ClassType;
 import com.football.webapp.WEB_INF.services.UserService;
 
 import org.hibernate.Session;

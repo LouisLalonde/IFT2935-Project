@@ -98,7 +98,7 @@ CREATE TABLE But (
     FOREIGN KEY (Buteur) REFERENCES Joueur(ID_Joueur), 
     ID_Match int,
     FOREIGN KEY (ID_Match) REFERENCES Match(ID_Match),
-    Timestamp time,
+    Temps time,
     ID_Type_But int,
     FOREIGN KEY (ID_Type_But) REFERENCES Type_But(ID_Type_But)
 );
@@ -116,7 +116,7 @@ CREATE TABLE Sanction (
     FOREIGN KEY (ID_Arbitre) REFERENCES Arbitre(ID_Arbitre), 
     ID_Match int,
     FOREIGN KEY (ID_Match) REFERENCES Match(ID_Match), 
-    Timestamp time, 
+    Temps time, 
     ID_Type_Sanction int,
     FOREIGN KEY (ID_Type_Sanction) REFERENCES Type_Sanction(ID_Type_Sanction)
 );
@@ -347,9 +347,5 @@ INSERT INTO Sanction VALUES (8, 55, 5, 8, '00:29:30', 2);
 INSERT INTO Sanction VALUES (9, 69, 2, 9, '00:55:42', 3);
 INSERT INTO Sanction VALUES (10, 87, 9, 10, '01:02:41', 2);
 INSERT INTO Sanction VALUES (11, 99, 3, 10, '01:08:41', 2);
-<<<<<<< HEAD
-=======
-
->>>>>>> Vanessa
 
 commit;

@@ -16,7 +16,7 @@
  
         <!-- Print executed SQL to stdout -->
         <property name="show_sql">true</property>
-        <property name="hibernate.hbm2ddl.auto">validate</property> 
+        <property name="hibernate.hbm2ddl.auto">none</property> 
         <!-- Annotated entity classes -->
         <mapping class="com.football.webapp.WEB_INF.classes.entities.Arbitre"/>
         <mapping class="com.football.webapp.WEB_INF.classes.entities.Blessure"/>
@@ -30,6 +30,8 @@
         <mapping class="com.football.webapp.WEB_INF.classes.entities.TypeArbitre"/>
         <mapping class="com.football.webapp.WEB_INF.classes.entities.TypeBut"/>
         <mapping class="com.football.webapp.WEB_INF.classes.entities.TypeSanction"/>
+        <mapping class="com.football.webapp.WEB_INF.classes.complex_entities.MeilleurPointeurCoupeDuMonde"/>
+        <mapping class="com.football.webapp.WEB_INF.classes.complex_entities.PermierArbitrePenalite"/>
         
     </session-factory>
 </hibernate-configuration>

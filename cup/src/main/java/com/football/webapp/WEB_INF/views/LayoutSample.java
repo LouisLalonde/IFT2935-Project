@@ -2,11 +2,9 @@ package com.football.webapp.WEB_INF.views;
 import java.util.ArrayList;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.football.api.models.CrudOperators.Enum.Operation;
+import com.football.webapp.WEB_INF.classes.complex_entities.MeilleurPointeurCoupeDuMonde;
+import com.football.webapp.WEB_INF.classes.complex_entities.PermierArbitrePenalite;
 import com.football.webapp.WEB_INF.classes.entities.Arbitre;
-<<<<<<< HEAD
-import com.football.webapp.WEB_INF.classes.entities.CoupeDuMonde;
-=======
->>>>>>> Vanessa
 import com.football.webapp.WEB_INF.classes.entities.Joueur;
 import com.football.webapp.WEB_INF.classes.entities.Match;
 import com.football.webapp.WEB_INF.classes.utility.AbstractedReadRequest;
@@ -112,7 +110,7 @@ public class LayoutSample extends Application {
 
                 try {
                     ArrayList<Integer> arbitres  = new AbstractedReadRequest().execute(session, Operation.READ, "1", Integer.class);
-                   
+                    System.out.println(arbitres);
 
                     answer.setText(arbitres.get(0) + " Carton(s) Jaune(s)");
 
@@ -135,21 +133,21 @@ public class LayoutSample extends Application {
                 
             try {
 
-                    ArrayList<Joueur> joueurs = new AbstractedReadRequest().execute(session, Operation.READ, "2", Joueur.class);
-                    
+                    ArrayList<MeilleurPointeurCoupeDuMonde> meilleurPointeurCoupeDuMonde = new AbstractedReadRequest().execute(session, Operation.READ, "2", MeilleurPointeurCoupeDuMonde.class);
+                    System.out.println(meilleurPointeurCoupeDuMonde);
 
                     StringBuilder display = new StringBuilder();
 
 
-                    for (Joueur joueur : joueurs) {
-                        display.append(
-                            "( " + 
-                            joueur.getPrenom() + " ; " +
-                            joueur.getNom() + " ; " +
-                            //joueur.getPays() +
-                            " ), "
-                        );
-                    };
+                    // for (MeilleurPointeurCoupeDuMonde joueur : meilleurPointeurCoupeDuMonde) {
+                    //     display.append(
+                    //         "( " + 
+                    //         joueur.getPrenom() + " ; " +
+                    //         joueur.getNom() + " ; " +
+                    //         joueur.getPays_Equipe() +
+                    //         " ), "
+                    //     );
+                    // };
 
     
                     answer.setText(display.toString());
@@ -170,56 +168,27 @@ public class LayoutSample extends Application {
         button3.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-<<<<<<< HEAD
-            try {
-                // ArrayList<Joueur> joueurs = new AbstractedReadRequest().execute(session, Operation.READ, "2", Joueur.class);
-                // ArrayList<CoupeDuMonde> coupeDuMondes = new AbstractedReadRequest().execute(session, Operation.READ, "1", CoupeDuMonde.class);
-                ArrayList<Arbitre> arbitres = new AbstractedReadRequest().execute(session, Operation.READ, "4", Arbitre.class);
-                System.out.println(arbitres.get(0).getDate_Naissance());
-
-                a.setAlertType(AlertType.CONFIRMATION);
-                StringBuilder display = new StringBuilder();
-                
-                // for (Joueur joueur : joueurs) {
-                //     display.append(
-                //         "( " + 
-                //         joueur.getPrenom() + " ; " +
-                //         joueur.getPrenom() + " ; " +
-                //         joueur.getDate_Naissance() + " ; " +
-                //         joueur.getNumero() + " ; " +
-                //         joueur.getPoste() +
-                //         " ), "
-                //     );
-                //   }
-                a.setContentText(display.toString());
-                a.getDialogPane().setMinHeight(Region.USE_PREF_SIZE);
-                // show the dialog
-                a.show();
-            } catch (JsonProcessingException e) {
-                e.printStackTrace();
-=======
-                title.setText("Trouver l’arbitre du premier match de la coupe du monde 1974 où un joueur a marqué un penalty, retourner les noms des deux pays jouant lors de ce match ainsi que le nom et prénom de l’arbitre.");
+                title.setText("Trouver l'arbitre du premier match de la coupe du monde 1974 où un joueur a marqué un penalty, retourner les noms des deux pays jouant lors de ce match ainsi que le nom et prénom de l’arbitre.");
                  
                 try {
 
-                    ArrayList<Arbitre> arbitres = new AbstractedReadRequest().execute(session, Operation.READ, "3", Arbitre.class);
-                    ArrayList<Match> matchs = new AbstractedReadRequest().execute(session, Operation.READ, "3", Match.class);
-
+                    ArrayList<PermierArbitrePenalite> permierArbitrePenalty = new AbstractedReadRequest().execute(session, Operation.READ, "3", PermierArbitrePenalite.class);
+                    System.out.println(permierArbitrePenalty);
                     StringBuilder display = new StringBuilder();
 
 
-                    for (Arbitre arbitre : arbitres) {
+                    // for (Arbitre arbitre : arbitres) {
                     
-                        display.append(
-                            "( " + 
-                            arbitre.getPrenom() + " ; " +
-                            arbitre.getNom() + " ; " +
-                            //match.getEquipe_Gagnante() + " ; " +
-                            //match.getEquipe_Perdante() +
-                            " ), "
-                        );
+                    //     display.append(
+                    //         "( " + 
+                    //         arbitre.getPrenom() + " ; " +
+                    //         arbitre.getNom() + " ; " +
+                    //         //match.getEquipe_Gagnante() + " ; " +
+                    //         //match.getEquipe_Perdante() +
+                    //         " ), "
+                    //     );
                         
-                      };
+                    //   };
 
 
                     answer.setText(display.toString());
@@ -232,7 +201,6 @@ public class LayoutSample extends Application {
             
             
                
->>>>>>> Vanessa
             }
     });
  
