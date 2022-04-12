@@ -2,8 +2,9 @@ package com.football.webapp.WEB_INF.views;
 import java.util.ArrayList;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.football.api.models.CrudOperators.Enum.Operation;
-import com.football.webapp.WEB_INF.classes.entities.CoupeDuMonde;
+import com.football.webapp.WEB_INF.classes.entities.Arbitre;
 import com.football.webapp.WEB_INF.classes.entities.Joueur;
+import com.football.webapp.WEB_INF.classes.entities.Match;
 import com.football.webapp.WEB_INF.classes.utility.AbstractedReadRequest;
 import org.hibernate.Session;
 import javafx.application.Application;
@@ -64,275 +65,168 @@ public class LayoutSample extends Application {
 // Use a border pane as the root for scene
         BorderPane border = new BorderPane();
         
-        HBox hbox = addHBox();
-        border.setTop(hbox);
-        border.setLeft(addVBox());
-        
-// Add a stack to the HBox in the top region
-        addStackPane(hbox);  
-        
-// To see only the grid in the center, uncomment the following statement
-// comment out the setCenter() call farther down        
-//        border.setCenter(addGridPane());
-        
-// Choose either a TilePane or FlowPane for right region and comment out the
-// one you aren't using        
-        border.setRight(addFlowPane());
-//        border.setRight(addTilePane());
-        
-// To see only the grid in the center, comment out the following statement
-// If both setCenter() calls are executed, the anchor pane from the second
-// call replaces the grid from the first call        
-        border.setCenter(addAnchorPane(addGridPane()));
- 
-        Scene scene = new Scene(border);
-        stage.setScene(scene);
-        stage.setTitle("Projet du cours IFT 2935");
-        stage.show();
-    }
- 
-/*
- * Creates an HBox with two buttons for the top region
- */
-    
-    private HBox addHBox() {
- 
         HBox hbox = new HBox();
         hbox.setPadding(new Insets(15, 12, 15, 12));
         hbox.setSpacing(10);   // Gap between nodes
         hbox.setStyle("-fx-background-color: #336699;");
- 
-        Button button1 = new Button("Query 1");
-        button1.setPrefSize(100, 20);
-    
-        button1.setOnAction(new EventHandler<ActionEvent>() {
-        Alert a = new Alert(AlertType.NONE);
-            @Override
-            public void handle(ActionEvent event) {
-            try {
-                ArrayList<Joueur> joueurs = new AbstractedReadRequest().execute(session, Operation.READ, "2", Joueur.class);
-                ArrayList<CoupeDuMonde> coupeDuMondes = new AbstractedReadRequest().execute(session, Operation.READ, "1", CoupeDuMonde.class);
 
-
-                a.setAlertType(AlertType.CONFIRMATION);
-                StringBuilder display = new StringBuilder();
-                
-                for (Joueur joueur : joueurs) {
-                    display.append(
-                        "( " + 
-                        joueur.getPrenom() + " ; " +
-                        joueur.getPrenom() + " ; " +
-                        joueur.getDate_Naissance() + " ; " +
-                        joueur.getNumero() + " ; " +
-                        joueur.getPoste() +
-                        " ), "
-                    );
-                  }
-                a.setContentText(display.toString());
-                a.getDialogPane().setMinHeight(Region.USE_PREF_SIZE);
-                // show the dialog
-                a.show();
-            } catch (JsonProcessingException e) {
-                e.printStackTrace();
-            }
-        }  
-    });
- 
-    Button button2 = new Button("Query 2");
-    button2.setPrefSize(100, 20);
-
-    
-    Button button3= new Button("Query 3");
-    button3.setPrefSize(100, 20);
-
-    Button button4= new Button("Query 4");
-    button4.setPrefSize(100, 20);
-
-
-    hbox.getChildren().addAll(button1, button2, button3, button4);
-    
-        return hbox;
-    }
-
-/*
- * Creates a VBox with a list of links for the left region
- */
-    private VBox addVBox() {
-        
         VBox vbox = new VBox();
         vbox.setPadding(new Insets(10)); // Set all sides to 10
         vbox.setSpacing(8);              // Gap between nodes
  
-        Text title = new Text("Data");
+
+        //HBox hbox = addHBox();
+        border.setTop(hbox);
+        border.setLeft(vbox);
+    
+ 
+        Scene scene = new Scene(border);
+        stage.setScene(scene);
+        stage.setTitle("Projet du cours IFT 2935 -- La coupe du monde des nations du football");
+        stage.setHeight(300);
+        stage.setWidth(1000);
+        stage.show();
+
+
+        Text title = new Text("Vanessa Bellegarde (20184886), Jonathan Therrien (20157376), Louis Lalonde (20162457), Alexandre Hamila (20181634) ");
         title.setFont(Font.font("Arial", FontWeight.BOLD, 14));
         vbox.getChildren().add(title);
-        
-        Hyperlink options[] = new Hyperlink[] {
-            new Hyperlink("Sales"),
-            new Hyperlink("Marketing"),
-            new Hyperlink("Distribution"),
-            new Hyperlink("Costs")};
+
+        Text answer = new Text("");
+        //answer.setFont(Font.font("Arial", FontWeight.BOLD, 14));
+        vbox.getChildren().add(answer);
+
  
-        for (int i=0; i<4; i++) {
-            // Add offset to left side to indent from title
-            VBox.setMargin(options[i], new Insets(0, 0, 0, 8));
-            vbox.getChildren().add(options[i]);
-        }
-        
-        return vbox;
-    }
- 
-/*
- * Uses a stack pane to create a help icon and adds it to the right side of an HBox
- * 
- * @param hb HBox to add the stack to
- */
-    private void addStackPane(HBox hb) {
- 
-        StackPane stack = new StackPane();
-        Rectangle helpIcon = new Rectangle(30.0, 25.0);
-        helpIcon.setFill(new LinearGradient(0,0,0,1, true, CycleMethod.NO_CYCLE,
-            new Stop[]{
-            new Stop(0,Color.web("#4977A3")),
-            new Stop(0.5, Color.web("#B0C6DA")),
-            new Stop(1,Color.web("#9CB6CF")),}));
-        helpIcon.setStroke(Color.web("#D0E6FA"));
-        helpIcon.setArcHeight(3.5);
-        helpIcon.setArcWidth(3.5);
-        
-        Text helpText = new Text("?");
-        helpText.setFont(Font.font("Verdana", FontWeight.BOLD, 18));
-        helpText.setFill(Color.WHITE);
-        helpText.setStroke(Color.web("#7080A0")); 
-        
-        stack.getChildren().addAll(helpIcon, helpText);
-        stack.setAlignment(Pos.CENTER_RIGHT);
-        // Add offset to right for question mark to compensate for RIGHT 
-        // alignment of all nodes
-        StackPane.setMargin(helpText, new Insets(0, 10, 0, 0));
-        
-        hb.getChildren().add(stack);
-        HBox.setHgrow(stack, Priority.ALWAYS);
+        Button button1 = new Button("Query 1");
+        button1.setPrefSize(100, 20);
+
+        button1.setOnAction(new EventHandler<ActionEvent>() {
+
+                @Override
+                public void handle(ActionEvent event) {
+                    title.setText("Trouver le nombre de Carton Jaune donné par Clement Turpin durant toutes les coupes du monde qu'il a arbitré.");
+
+                try {
+                    ArrayList<Integer> arbitres  = new AbstractedReadRequest().execute(session, Operation.READ, "1", Integer.class);
+                   
+
+                    answer.setText(arbitres.get(0) + " Carton(s) Jaune(s)");
+
+
+                    
+                } catch (JsonProcessingException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+                   
+
+        Button button2 = new Button("Query 2");
+        button2.setPrefSize(100, 20);    
+
+        button2.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                title.setText("Trouver le ou les joueurs qui a mis le plus de but en combinant les coupes du monde des années 1966 à 1978, retourner son nom, prénom et son pays. ");
                 
-    }
- 
-/*
- * Creates a grid for the center region with four columns and three rows
- */
-    private GridPane addGridPane() {
- 
-        GridPane grid = new GridPane();
-        grid.setHgap(10);
-        grid.setVgap(10);
-        grid.setPadding(new Insets(0, 10, 0, 10));
- 
-        // Category in column 2, row 1
-        Text category = new Text("Sales:");
-        category.setFont(Font.font("Arial", FontWeight.BOLD, 20));
-        grid.add(category, 1, 0); 
-        
-        // Title in column 3, row 1
-        Text chartTitle = new Text("Current Year");
-        chartTitle.setFont(Font.font("Arial", FontWeight.BOLD, 20));
-        grid.add(chartTitle, 2, 0);
-        
-        // Subtitle in columns 2-3, row 2
-        Text chartSubtitle = new Text("Goods and Services");
-        grid.add(chartSubtitle, 1, 1, 2, 1);
-        
-        // House icon in column 1, rows 1-2
-        ImageView imageHouse = new ImageView(
-                    new Image(LayoutSample.class.getResourceAsStream("graphics/house.png")));
-        grid.add(imageHouse, 0, 0, 1, 2);
- 
-        // Left label in column 1 (bottom), row 3
-        Text goodsPercent = new Text("Goods\n80%");
-        GridPane.setValignment(goodsPercent, VPos.BOTTOM);
-        grid.add(goodsPercent, 0, 2);
-        
-        // Chart in columns 2-3, row 3
-        ImageView imageChart = new ImageView(
-                    new Image(LayoutSample.class.getResourceAsStream("graphics/piechart.png")));
-        grid.add(imageChart, 1, 2, 2, 1);
-        
-        // Right label in column 4 (top), row 3
-        Text servicesPercent = new Text("Services\n20%");
-        GridPane.setValignment(servicesPercent, VPos.TOP);
-        grid.add(servicesPercent, 3, 2);
-        
-//        grid.setGridLinesVisible(true);
-        return grid;
-    }
- 
-/*
- * Creates a horizontal flow pane with eight icons in four rows
- */
-    private FlowPane addFlowPane() {
- 
-        FlowPane flow = new FlowPane();
-        flow.setPadding(new Insets(5, 0, 5, 0));
-        flow.setVgap(4);
-        flow.setHgap(4);
-        flow.setPrefWrapLength(170); // preferred width allows for two columns
-        flow.setStyle("-fx-background-color: DAE6F3;");
- 
-        ImageView pages[] = new ImageView[8];
-        for (int i=0; i<8; i++) {
-            pages[i] = new ImageView(
-                    new Image(LayoutSample.class.getResourceAsStream(
-                    "graphics/chart_"+(i+1)+".png")));
-            flow.getChildren().add(pages[i]);
-        }
- 
-        return flow;
-    }
+            try {
+
+                    ArrayList<Joueur> joueurs = new AbstractedReadRequest().execute(session, Operation.READ, "2", Joueur.class);
+                    
+
+                    StringBuilder display = new StringBuilder();
+
+
+                    for (Joueur joueur : joueurs) {
+                        display.append(
+                            "( " + 
+                            joueur.getPrenom() + " ; " +
+                            joueur.getNom() + " ; " +
+                            //joueur.getPays() +
+                            " ), "
+                        );
+                    };
+
     
-/*
- * Creates a horizontal (default) tile pane with eight icons in four rows
- */
-    private TilePane addTilePane() {
-        
-        TilePane tile = new TilePane();
-        tile.setPadding(new Insets(5, 0, 5, 0));
-        tile.setVgap(4);
-        tile.setHgap(4);
-        tile.setPrefColumns(2);
-        tile.setStyle("-fx-background-color: DAE6F3;");
+                    answer.setText(display.toString());
+
+
+
+                } catch (JsonProcessingException e) {
+                    e.printStackTrace();
+                }
+            
+            }
+    });
+   
+    
+        Button button3= new Button("Query 3");
+        button3.setPrefSize(100, 20);
+
+        button3.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                title.setText("Trouver l’arbitre du premier match de la coupe du monde 1974 où un joueur a marqué un penalty, retourner les noms des deux pays jouant lors de ce match ainsi que le nom et prénom de l’arbitre.");
+                 
+                try {
+
+                    ArrayList<Arbitre> arbitres = new AbstractedReadRequest().execute(session, Operation.READ, "3", Arbitre.class);
+                    ArrayList<Match> matchs = new AbstractedReadRequest().execute(session, Operation.READ, "3", Match.class);
+
+                    StringBuilder display = new StringBuilder();
+
+
+                    for (Arbitre arbitre : arbitres) {
+                    
+                        display.append(
+                            "( " + 
+                            arbitre.getPrenom() + " ; " +
+                            arbitre.getNom() + " ; " +
+                            //match.getEquipe_Gagnante() + " ; " +
+                            //match.getEquipe_Perdante() +
+                            " ), "
+                        );
+                        
+                      };
+
+
+                    answer.setText(display.toString());
+                    //System.out.println(display.toString());
+
+
+                } catch (JsonProcessingException e) {
+                    e.printStackTrace();
+                }
+            
+            
+               
+            }
+    });
  
-        ImageView pages[] = new ImageView[8];
-        for (int i=0; i<8; i++) {
-            pages[i] = new ImageView(
-                    new Image(LayoutSample.class.getResourceAsStream(
-                    "graphics/chart_"+(i+1)+".png")));
-            tile.getChildren().add(pages[i]);
-        }
- 
-        return tile;
+    
+        Button button4 = new Button("Query 4");
+        button4.setPrefSize(100, 20);
+
+        button4.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                title.setText("Trouver le nombre de but marqué après 00:09:00 minutes par des joueurs dont le poste est milieu_centre (AC) durant l’année 1978.");
+            
+                try {
+                    ArrayList<Integer> buts  = new AbstractedReadRequest().execute(session, Operation.READ, "4", Integer.class);
+
+                    answer.setText(buts.get(0) + " But(s)");
+
+                } catch (JsonProcessingException e) {
+                    e.printStackTrace();
+                }
+            
+            }
+    });
+    
+
+        hbox.getChildren().addAll(button1, button2, button3, button4);
+    
     }
  
-/*
- * Creates an anchor pane using the provided grid and an HBox with buttons
- * 
- * @param grid Grid to anchor to the top of the anchor pane
- */
-    private AnchorPane addAnchorPane(GridPane grid) {
- 
-        AnchorPane anchorpane = new AnchorPane();
-        
-        Button buttonSave = new Button("Save");
-        Button buttonCancel = new Button("Cancel");
- 
-        HBox hb = new HBox();
-        hb.setPadding(new Insets(0, 10, 10, 10));
-        hb.setSpacing(10);
-        hb.getChildren().addAll(buttonSave, buttonCancel);
- 
-        anchorpane.getChildren().addAll(grid,hb);
-        // Anchor buttons to bottom right, anchor grid to top
-        AnchorPane.setBottomAnchor(hb, 8.0);
-        AnchorPane.setRightAnchor(hb, 5.0);
-        AnchorPane.setTopAnchor(grid, 10.0);
- 
-        return anchorpane;
-    }
 }
