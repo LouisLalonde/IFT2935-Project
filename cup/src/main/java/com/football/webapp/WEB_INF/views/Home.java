@@ -4,46 +4,30 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.football.api.models.CrudOperators.Enum.Operation;
 import com.football.webapp.WEB_INF.classes.complex_entities.MeilleurPointeurCoupeDuMonde;
 import com.football.webapp.WEB_INF.classes.complex_entities.PermierArbitrePenalite;
+<<<<<<< HEAD:cup/src/main/java/com/football/webapp/WEB_INF/views/Home.java
 import com.football.webapp.WEB_INF.classes.entities.Arbitre;
 import com.football.webapp.WEB_INF.classes.entities.Joueur;
 import com.football.webapp.WEB_INF.classes.entities.Match;
 import com.football.webapp.WEB_INF.classes.utility.RequestObject;
 import com.football.webapp.WEB_INF.services.UserService;
 
+=======
+import com.football.webapp.WEB_INF.classes.utility.AbstractedReadRequest;
+>>>>>>> 9518d6037c99829c46f7ebee5fb8baa36129fe34:cup/src/main/java/com/football/webapp/WEB_INF/views/LayoutSample.java
 import org.hibernate.Session;
 import javafx.application.Application;
 import javafx.geometry.Insets;
-import javafx.geometry.Pos;
-import javafx.geometry.VPos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Hyperlink;
-import javafx.scene.control.Alert.AlertType;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.Priority;
-import javafx.scene.layout.StackPane;
-import javafx.scene.layout.TilePane;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
-import javafx.scene.paint.CycleMethod;
-import javafx.scene.paint.LinearGradient;
-import javafx.scene.paint.Stop;
-import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.scene.control.Alert;
-import javafx.scene.layout.Region;
- 
  
 /**
  * Sample application that shows examples of the different layout panes
@@ -112,9 +96,13 @@ public class Home extends Application {
                     title.setText("Trouver le nombre de Carton Jaune donné par Clement Turpin durant toutes les coupes du monde qu'il a arbitré.");
 
                 try {
+<<<<<<< HEAD:cup/src/main/java/com/football/webapp/WEB_INF/views/Home.java
                     ArrayList<Integer> arbitres = userService.appUseServices(requestObject.build(session, Operation.READ, "1",  Integer.class))
                     .appUseDataBase().dataBaseService().main();
                     System.out.println(arbitres);
+=======
+                    ArrayList<Integer> arbitres  = new AbstractedReadRequest().execute(session, Operation.READ, "1", Integer.class);
+>>>>>>> 9518d6037c99829c46f7ebee5fb8baa36129fe34:cup/src/main/java/com/football/webapp/WEB_INF/views/LayoutSample.java
 
                     answer.setText(arbitres.get(0) + " Carton(s) Jaune(s)");
                     
@@ -134,28 +122,29 @@ public class Home extends Application {
                 title.setText("Trouver le ou les joueurs qui a mis le plus de but en combinant les coupes du monde des années 1966 à 1978, retourner son nom, prénom et son pays. ");
                 
             try {
+<<<<<<< HEAD:cup/src/main/java/com/football/webapp/WEB_INF/views/Home.java
 
                     ArrayList<MeilleurPointeurCoupeDuMonde> meilleurPointeurCoupeDuMonde = userService.appUseServices(requestObject.build(session, Operation.READ, "2",  MeilleurPointeurCoupeDuMonde.class))
                     .appUseDataBase().dataBaseService().main();
                     System.out.println(meilleurPointeurCoupeDuMonde);
+=======
+                    ArrayList<MeilleurPointeurCoupeDuMonde> meilleurPointeurCoupeDuMonde = new AbstractedReadRequest().execute(session, Operation.READ, "2", MeilleurPointeurCoupeDuMonde.class);
+>>>>>>> 9518d6037c99829c46f7ebee5fb8baa36129fe34:cup/src/main/java/com/football/webapp/WEB_INF/views/LayoutSample.java
 
                     StringBuilder display = new StringBuilder();
 
 
-                    // for (MeilleurPointeurCoupeDuMonde joueur : meilleurPointeurCoupeDuMonde) {
-                    //     display.append(
-                    //         "( " + 
-                    //         joueur.getPrenom() + " ; " +
-                    //         joueur.getNom() + " ; " +
-                    //         joueur.getPays_Equipe() +
-                    //         " ), "
-                    //     );
-                    // };
+                     for (MeilleurPointeurCoupeDuMonde joueur : meilleurPointeurCoupeDuMonde) {
+                         display.append(
+                             "( Prenom Joueur: " + 
+                             joueur.getPrenom() + " ;  Nom Joueur: " +
+                             joueur.getNom() + " ; Pays Joueur: " +
+                             joueur.getPays_Equipe() +
+                             " ) "
+                         );
+                    };
 
-    
                     answer.setText(display.toString());
-
-
 
                 } catch (JsonProcessingException e) {
                     e.printStackTrace();
@@ -177,33 +166,29 @@ public class Home extends Application {
                     ArrayList<PermierArbitrePenalite> permierArbitrePenalty = userService.appUseServices(requestObject.build(session, Operation.READ, "3",  PermierArbitrePenalite.class))
                     .appUseDataBase().dataBaseService().main();
 
+<<<<<<< HEAD:cup/src/main/java/com/football/webapp/WEB_INF/views/Home.java
                     System.out.println(permierArbitrePenalty);
+=======
+                    ArrayList<PermierArbitrePenalite> permierArbitrePenalty = new AbstractedReadRequest().execute(session, Operation.READ, "3", PermierArbitrePenalite.class);
+>>>>>>> 9518d6037c99829c46f7ebee5fb8baa36129fe34:cup/src/main/java/com/football/webapp/WEB_INF/views/LayoutSample.java
                     StringBuilder display = new StringBuilder();
 
-
-                    // for (Arbitre arbitre : arbitres) {
-                    
-                    //     display.append(
-                    //         "( " + 
-                    //         arbitre.getPrenom() + " ; " +
-                    //         arbitre.getNom() + " ; " +
-                    //         //match.getEquipe_Gagnante() + " ; " +
-                    //         //match.getEquipe_Perdante() +
-                    //         " ), "
-                    //     );
-                        
-                    //   };
-
+                    for (PermierArbitrePenalite arbitre : permierArbitrePenalty) {
+                        display.append(
+                            "( Prenom Arbitre: " + 
+                            arbitre.getPrenom() + " ;  Nom Arbitre: " +
+                            arbitre.getNom() + " ; Equipe Gaganante: " +
+                            arbitre.getEquipe_Gagnante() +" ; Equipe Perdante: " +
+                            arbitre.getEquipe_Perdante() + 
+                            " ) "
+                        );
+                    };
 
                     answer.setText(display.toString());
-                    //System.out.println(display.toString());
-
 
                 } catch (JsonProcessingException e) {
                     e.printStackTrace();
-                }
-            
-            
+                }          
                
             }
     });
@@ -229,7 +214,6 @@ public class Home extends Application {
             }
     });
     
-
         hbox.getChildren().addAll(button1, button2, button3, button4);
     
     }
