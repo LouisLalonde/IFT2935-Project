@@ -98,8 +98,8 @@ public class DataBase {
 
     /**
      * 
-     * @param <T>
-     * @return
+     * @param <T> Generic type
+     * @return ArrayList<T>
      * @throws JsonProcessingException
      */
     public <T> ArrayList<T> main() throws JsonProcessingException{

@@ -4,12 +4,8 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.football.api.models.CrudOperators.Enum.Operation;
 import com.football.webapp.WEB_INF.classes.complex_entities.MeilleurPointeurCoupeDuMonde;
 import com.football.webapp.WEB_INF.classes.complex_entities.PermierArbitrePenalite;
-import com.football.webapp.WEB_INF.classes.entities.Arbitre;
-import com.football.webapp.WEB_INF.classes.entities.Joueur;
-import com.football.webapp.WEB_INF.classes.entities.Match;
 import com.football.webapp.WEB_INF.classes.utility.RequestObject;
 import com.football.webapp.WEB_INF.services.UserService;
-
 import org.hibernate.Session;
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -69,8 +65,7 @@ public class Home extends Application {
         Scene scene = new Scene(border);
         stage.setScene(scene);
         stage.setTitle("Projet du cours IFT 2935 -- La coupe du monde des nations du football");
-        stage.setHeight(500);
-        stage.setWidth(1000);
+        stage.setMaximized(true); 
         stage.show();
 
 
@@ -159,7 +154,7 @@ public class Home extends Application {
 
                     for (PermierArbitrePenalite arbitre : permierArbitrePenalty) {
                         display.append(
-                            "( Prenom arbitre: " + 
+                            "( Prénom arbitre: " + 
                             arbitre.getPrenom() + " ;  Nom arbitre: " +
                             arbitre.getNom() + " ; Equipe gaganante: " +
                             arbitre.getEquipe_Gagnante() +" ; Equipe perdante: " +
