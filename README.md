@@ -53,11 +53,15 @@ On pourra inclure dans chaque entité tous les éléments réalistes possibles �
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/LouisLalonde/IFT2935-Project.git
+   ```
 
 <!-- GETTING STARTED -->
 ## Pour débuter le projet
-
-Git clone the repository
 
 ### Préalable pour le développement
 
@@ -77,17 +81,10 @@ Git clone the repository
 - Avoir une base de donnée locale avec comme nom : football
 - L'utilisateur postgres doit avoir comme mot de passe postgres
 - Exécuter le fichier d'importation des données import.sql
- ```sh
+  ```sh
   psql -h localhost -U postgres -d football -f import.sql
   ```
   - Exécuter le jar
-
-### Installation
-
-1. Clone the repo
-   ```sh
-   git clone https://github.com/LouisLalonde/IFT2935-Project.git
-   ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
