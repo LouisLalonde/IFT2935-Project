@@ -14,48 +14,44 @@ public class Staff extends Personne{
     @Id
     @GeneratedValue(generator = "generator")
     @Column(name = "ID_Staff")
-    private Integer ID_Staff;
+    private Integer idStaff;
     @Column(name = "ID_Equipe")
-    private Integer ID_Equipe;
+    private Integer idEquipe;
     @Column(name = "Anciennete")
-    private Integer Anciennete;
+    private Integer anciennete;
 
     public Staff(){}
-    
-    public Staff(String Prenom, String Nom, Date Date_Naissance) {
-        super(Prenom, Nom, Date_Naissance);
+
+    public Staff(String prenom, String nom, Date dateNaissance, Integer idStaff, Integer idEquipe, Integer anciennete) {
+        super(prenom, nom, dateNaissance);
+        this.idStaff = idStaff;
+        this.idEquipe = idEquipe;
+        this.anciennete = anciennete;
     }
 
-    public Staff(String Prenom, String Nom, Date Date_Naissance, Integer ID_Staff, Integer ID_Equipe, Integer Anciennete) {
-        super(Prenom, Nom, Date_Naissance);
-        this.ID_Staff = ID_Staff;
-        this.ID_Equipe = ID_Equipe;
-        this.Anciennete = Anciennete;
-    }
-    
 
-    public Integer getID_Staff() {
-        return this.ID_Staff;
+    public Integer getIdStaff() {
+        return this.idStaff;
     }
 
-    public void setID_Staff(Integer ID_Staff) {
-        this.ID_Staff = ID_Staff;
+    public void setIdStaff(Integer idStaff) {
+        this.idStaff = idStaff;
     }
 
-    public Integer getID_Equipe() {
-        return this.ID_Equipe;
+    public Integer getIdEquipe() {
+        return this.idEquipe;
     }
 
-    public void setID_Equipe(Integer ID_Equipe) {
-        this.ID_Equipe = ID_Equipe;
+    public void setIdEquipe(Integer idEquipe) {
+        this.idEquipe = idEquipe;
     }
 
     public Integer getAnciennete() {
-        return this.Anciennete;
+        return this.anciennete;
     }
 
-    public void setAnciennete(Integer Anciennete) {
-        this.Anciennete = Anciennete;
+    public void setAnciennete(Integer anciennete) {
+        this.anciennete = anciennete;
     }
 
 }

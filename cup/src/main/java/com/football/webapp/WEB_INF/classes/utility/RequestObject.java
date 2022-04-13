@@ -13,16 +13,22 @@ public class RequestObject {
 
     /**
      * Use to create a request object for the API service
-     * @param session : Hibernate sesson object
+     * @param session Hibernate sesson object
      * @param operation CRUD operation enum type
-     * @param body : request transaction data
+     * @param queryNumber Number of the query to be mapped in the switch case
+     * @param classType Returned data class type from the SQL query
      * @return HashMap<String, Object>
      */
-    public HashMap<String, Object> build(Session session, Operation operation, HashMap<String, String> body) {
+    public HashMap<String, Object> build(Session session, Operation operation, String queryNumber,
+     Class classType) {
         return new HashMap<String, Object>() {{
-            put("operation", operation);
             put("session", session);
-            put("body", body);
+            put("operation", operation);
+            put("classType", classType);
+            put("body", new HashMap<String, String>() {{
+                put("queryNumber", queryNumber);
+                put("mapClass", classType.getName());
+                }});
         }};
     }
 }

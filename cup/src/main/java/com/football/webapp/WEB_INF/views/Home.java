@@ -7,7 +7,9 @@ import com.football.webapp.WEB_INF.classes.complex_entities.PermierArbitrePenali
 import com.football.webapp.WEB_INF.classes.entities.Arbitre;
 import com.football.webapp.WEB_INF.classes.entities.Joueur;
 import com.football.webapp.WEB_INF.classes.entities.Match;
-import com.football.webapp.WEB_INF.classes.utility.AbstractedReadRequest;
+import com.football.webapp.WEB_INF.classes.utility.RequestObject;
+import com.football.webapp.WEB_INF.services.UserService;
+
 import org.hibernate.Session;
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -50,7 +52,7 @@ import javafx.scene.layout.Region;
  */
  
  
-public class LayoutSample extends Application {
+public class Home extends Application {
     private static Session session;
  
     /**
@@ -58,13 +60,15 @@ public class LayoutSample extends Application {
      */
     public static void main(String[] args, Session hibernateSession) {
         session = hibernateSession;
-        launch(LayoutSample.class, args);
+        launch(Home.class, args);
     }
     
     @Override
     public void start(Stage stage) {
- 
-// Use a border pane as the root for scene
+        // Constructors
+        RequestObject requestObject = new RequestObject();
+        UserService userService = new UserService();
+        // Use a border pane as the root for scene
         BorderPane border = new BorderPane();
         
         HBox hbox = new HBox();
@@ -98,7 +102,6 @@ public class LayoutSample extends Application {
         //answer.setFont(Font.font("Arial", FontWeight.BOLD, 14));
         vbox.getChildren().add(answer);
 
- 
         Button button1 = new Button("Query 1");
         button1.setPrefSize(100, 20);
 
@@ -109,12 +112,11 @@ public class LayoutSample extends Application {
                     title.setText("Trouver le nombre de Carton Jaune donné par Clement Turpin durant toutes les coupes du monde qu'il a arbitré.");
 
                 try {
-                    ArrayList<Integer> arbitres  = new AbstractedReadRequest().execute(session, Operation.READ, "1", Integer.class);
+                    ArrayList<Integer> arbitres = userService.appUseServices(requestObject.build(session, Operation.READ, "1",  Integer.class))
+                    .appUseDataBase().dataBaseService().main();
                     System.out.println(arbitres);
 
                     answer.setText(arbitres.get(0) + " Carton(s) Jaune(s)");
-
-
                     
                 } catch (JsonProcessingException e) {
                     e.printStackTrace();
@@ -133,7 +135,8 @@ public class LayoutSample extends Application {
                 
             try {
 
-                    ArrayList<MeilleurPointeurCoupeDuMonde> meilleurPointeurCoupeDuMonde = new AbstractedReadRequest().execute(session, Operation.READ, "2", MeilleurPointeurCoupeDuMonde.class);
+                    ArrayList<MeilleurPointeurCoupeDuMonde> meilleurPointeurCoupeDuMonde = userService.appUseServices(requestObject.build(session, Operation.READ, "2",  MeilleurPointeurCoupeDuMonde.class))
+                    .appUseDataBase().dataBaseService().main();
                     System.out.println(meilleurPointeurCoupeDuMonde);
 
                     StringBuilder display = new StringBuilder();
@@ -171,8 +174,9 @@ public class LayoutSample extends Application {
                 title.setText("Trouver l'arbitre du premier match de la coupe du monde 1974 où un joueur a marqué un penalty, retourner les noms des deux pays jouant lors de ce match ainsi que le nom et prénom de l’arbitre.");
                  
                 try {
+                    ArrayList<PermierArbitrePenalite> permierArbitrePenalty = userService.appUseServices(requestObject.build(session, Operation.READ, "3",  PermierArbitrePenalite.class))
+                    .appUseDataBase().dataBaseService().main();
 
-                    ArrayList<PermierArbitrePenalite> permierArbitrePenalty = new AbstractedReadRequest().execute(session, Operation.READ, "3", PermierArbitrePenalite.class);
                     System.out.println(permierArbitrePenalty);
                     StringBuilder display = new StringBuilder();
 
@@ -214,8 +218,8 @@ public class LayoutSample extends Application {
                 title.setText("Trouver le nombre de but marqué après 00:09:00 minutes par des joueurs dont le poste est milieu_centre (AC) durant l’année 1978.");
             
                 try {
-                    ArrayList<Integer> buts  = new AbstractedReadRequest().execute(session, Operation.READ, "4", Integer.class);
-
+                    ArrayList<Integer> buts = userService.appUseServices(requestObject.build(session, Operation.READ, "4",  Integer.class))
+                    .appUseDataBase().dataBaseService().main();
                     answer.setText(buts.get(0) + " But(s)");
 
                 } catch (JsonProcessingException e) {

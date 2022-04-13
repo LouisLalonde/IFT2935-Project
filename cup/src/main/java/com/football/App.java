@@ -1,6 +1,6 @@
 package com.football;
 import com.football.webapp.WEB_INF.services.UserService;
-import com.football.webapp.WEB_INF.views.LayoutSample;
+import com.football.webapp.WEB_INF.views.Home;
 import org.hibernate.Session;
 
 /**
@@ -10,7 +10,7 @@ public class App {
 
     public static void frontEnd(String[] args, Session session){
         // Front-end logic goes here.
-        LayoutSample.main(args, session);
+        Home.main(args, session);
     }
 
     public static Session backEnd(UserService userService){

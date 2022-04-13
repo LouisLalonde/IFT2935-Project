@@ -14,32 +14,34 @@ public class Arbitre extends Personne {
     @Id
     @GeneratedValue(generator = "generator")
     @Column(name = "ID_Arbitre")
-    private Integer ID_Arbitre;
+    private Integer idArbitre;
     @Column(name = "ID_Type_Arbitre")
-    private Integer ID_Type_Arbitre;
+    private Integer idTypeArbitre;
 
     public Arbitre(){}
 
-    public Arbitre(String Prenom, String Nom, Date Date_Naissance, Integer ID_Arbitre, Integer ID_Type_Arbitre) {
-        super(Prenom, Nom, Date_Naissance);
-        this.ID_Arbitre = ID_Arbitre;
-        this.ID_Type_Arbitre = ID_Type_Arbitre;
+
+    public Arbitre(String prenom, String nom, Date dateNaissance, Integer idArbitre, Integer idTypeArbitre) {
+        super(prenom, nom, dateNaissance);
+        this.idArbitre = idArbitre;
+        this.idTypeArbitre = idTypeArbitre;
     }
 
-    public Integer getID_Arbitre() {
-        return this.ID_Arbitre;
+
+    public Integer getIdArbitre() {
+        return this.idArbitre;
     }
 
-    public void setID_Arbitre(Integer ID_Arbitre) {
-        this.ID_Arbitre = ID_Arbitre;
+    public void setIdArbitre(Integer idArbitre) {
+        this.idArbitre = idArbitre;
     }
 
-    public Integer getID_Type_Arbitre() {
-        return this.ID_Type_Arbitre;
+    public Integer getIdTypeArbitre() {
+        return this.idTypeArbitre;
     }
 
-    public void setID_Type_Arbitre(Integer ID_Type_Arbitre) {
-        this.ID_Type_Arbitre = ID_Type_Arbitre;
+    public void setIdTypeArbitre(Integer idTypeArbitre) {
+        this.idTypeArbitre = idTypeArbitre;
     }
 
 }

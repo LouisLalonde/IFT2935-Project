@@ -14,32 +14,33 @@ public class TypeBut {
     @Id
     @GeneratedValue(generator = "generator")
     @Column(name = "ID_Type_But")
-    private Integer ID_Type_But;
+    private Integer idTypeBut;
     @Column(name = "Nom_Type_But")
-    private String Nom_Type_But;
+    private String nomTypeBut;
 
     public TypeBut(){}
 
-    public TypeBut(Integer ID_Type_But, String Nom_Type_But) {
-        this.ID_Type_But = ID_Type_But;
-        this.Nom_Type_But = Nom_Type_But;
+
+    public TypeBut(Integer idTypeBut, String nomTypeBut) {
+        this.idTypeBut = idTypeBut;
+        this.nomTypeBut = nomTypeBut;
+    }
+    
+
+    public Integer getIdTypeBut() {
+        return this.idTypeBut;
     }
 
-
-    public Integer getID_Type_But() {
-        return this.ID_Type_But;
+    public void setIdTypeBut(Integer idTypeBut) {
+        this.idTypeBut = idTypeBut;
     }
 
-    public void setID_Type_But(Integer ID_Type_But) {
-        this.ID_Type_But = ID_Type_But;
+    public String getNomTypeBut() {
+        return this.nomTypeBut;
     }
 
-    public String getNom_Type_But() {
-        return this.Nom_Type_But;
-    }
-
-    public void setNom_Type_But(String Nom_Type_But) {
-        this.Nom_Type_But = Nom_Type_But;
-    }
+    public void setNomTypeBut(String nomTypeBut) {
+        this.nomTypeBut = nomTypeBut;
+    }    
 
 }

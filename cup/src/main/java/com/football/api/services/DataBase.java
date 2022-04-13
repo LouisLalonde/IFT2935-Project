@@ -17,6 +17,7 @@ import org.hibernate.query.Query;
 public class DataBase {
     private Session session;
     private Operation operation;
+    private Class classType;
     private HashMap<String, String> queryData;
 
     public DataBase(){};
@@ -24,6 +25,7 @@ public class DataBase {
     public DataBase(HashMap<String, Object> data) throws JsonProcessingException{
         this.session = (Session) data.get("session");
         this.operation = (Operation) data.get("operation");
+        this.classType = (Class) data.get("classType");
         this.queryData = (HashMap<String, String>) data.get("body");
     }
 
@@ -92,5 +94,23 @@ public class DataBase {
             default:
                 return responseModel.error("Wrong operation");
           }
+    }
+
+    /**
+     * 
+     * @param <T>
+     * @return
+     * @throws JsonProcessingException
+     */
+    public <T> ArrayList<T> main() throws JsonProcessingException{
+        try {
+            HashMap<String, Object> res =  this.executeQuery();
+            String jsonObjects = (String) res.get("body");
+            // Converting the json objects to the given class
+            return DataBindModel.deserialize(jsonObjects, classType);
+        } catch(Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }

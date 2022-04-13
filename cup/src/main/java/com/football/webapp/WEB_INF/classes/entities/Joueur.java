@@ -14,55 +14,56 @@ public class Joueur extends Personne {
     @Id
     @GeneratedValue(generator = "generator")
     @Column(name = "ID_Joueur")
-    private Integer ID_Joueur;
+    private Integer idJoueur;
     @Column(name = "ID_Equipe")
-    private Integer ID_Equipe;
+    private Integer idEquipe;
     @Column(name = "Numero")
-    private Integer Numero;
+    private Integer numero;
     @Column(name = "Poste")
-    private String Poste;
+    private String poste;
 
     public Joueur(){}
-    
-    public Joueur(String Prenom, String Nom, Date Date_Naissance, Integer ID_Joueur, Integer ID_Equipe, Integer Numero, String Poste) {
-        super(Prenom, Nom, Date_Naissance);
-        this.ID_Joueur = ID_Joueur;
-        this.ID_Equipe = ID_Equipe;
-        this.Numero = Numero;
-        this.Poste = Poste;
+
+
+    public Joueur(String prenom, String nom, Date dateNaissance, Integer idJoueur, Integer idEquipe, Integer numero, String poste) {
+        super(prenom, nom, dateNaissance);
+        this.idJoueur = idJoueur;
+        this.idEquipe = idEquipe;
+        this.numero = numero;
+        this.poste = poste;
     }
 
 
-    public Integer getID_Joueur() {
-        return this.ID_Joueur;
+    public Integer getIdJoueur() {
+        return this.idJoueur;
     }
 
-    public void setID_Joueur(Integer ID_Joueur) {
-        this.ID_Joueur = ID_Joueur;
+    public void setIdJoueur(Integer idJoueur) {
+        this.idJoueur = idJoueur;
     }
 
-    public Integer getID_Equipe() {
-        return this.ID_Equipe;
+    public Integer getIdEquipe() {
+        return this.idEquipe;
     }
 
-    public void setID_Equipe(Integer ID_Equipe) {
-        this.ID_Equipe = ID_Equipe;
+    public void setIdEquipe(Integer idEquipe) {
+        this.idEquipe = idEquipe;
     }
 
     public Integer getNumero() {
-        return this.Numero;
+        return this.numero;
     }
 
-    public void setNumero(Integer Numero) {
-        this.Numero = Numero;
+    public void setNumero(Integer numero) {
+        this.numero = numero;
     }
 
     public String getPoste() {
-        return this.Poste;
+        return this.poste;
     }
 
-    public void setPoste(String Poste) {
-        this.Poste = Poste;
-    }
+    public void setPoste(String poste) {
+        this.poste = poste;
+    }       
 
 }

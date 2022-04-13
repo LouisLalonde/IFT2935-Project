@@ -23,7 +23,6 @@ public class PermierArbitrePenalite extends Personne{
         this.Equipe_Perdante = Equipe_Perdante;
     }
 
-
     public String getEquipe_Gagnante() {
         return this.Equipe_Gagnante;
     }

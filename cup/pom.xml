@@ -6,7 +6,7 @@
 
   <groupId>com.football</groupId>
   <artifactId>cup</artifactId>
-  <version>1.0-DEVELOPMENT</version>
+  <version>1.0-PRODUCTION</version>
 
   <name>cup</name>
   <!-- FIXME change it to the project's website -->
@@ -110,6 +110,20 @@
           <configuration>
               <mainClass>Helloworld</mainClass>
           </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <configuration>
+          <appendAssemblyId>false</appendAssemblyId>
+          <archive>
+            <manifest>
+              <mainClass>com.football.App</mainClass>
+            </manifest>
+          </archive>
+          <descriptorRefs>
+            <descriptorRef>jar-with-dependencies</descriptorRef>
+          </descriptorRefs>
+        </configuration>
       </plugin>
       </plugins>
     </pluginManagement>

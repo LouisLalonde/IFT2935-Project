@@ -14,32 +14,31 @@ public class TypeSanction {
     @Id
     @GeneratedValue(generator = "generator")
     @Column(name = "ID_Type_Sanction")
-    private Integer ID_Type_Sanction;
+    private Integer idTypeSanction;
     @Column(name = "Nom_Type_Sanction")
-    private String Nom_Type_Sanction;
+    private String nomTypeSanction;
 
     public TypeSanction(){}
 
-    public TypeSanction(Integer ID_Type_Sanction, String Nom_Type_Sanction) {
-        this.ID_Type_Sanction = ID_Type_Sanction;
-        this.Nom_Type_Sanction = Nom_Type_Sanction;
+    public TypeSanction(Integer idTypeSanction, String nomTypeSanction) {
+        this.idTypeSanction = idTypeSanction;
+        this.nomTypeSanction = nomTypeSanction;
     }
 
-
-    public Integer getID_Type_Sanction() {
-        return this.ID_Type_Sanction;
+    public Integer getIdTypeSanction() {
+        return this.idTypeSanction;
     }
 
-    public void setID_Type_Sanction(Integer ID_Type_Sanction) {
-        this.ID_Type_Sanction = ID_Type_Sanction;
+    public void setIdTypeSanction(Integer idTypeSanction) {
+        this.idTypeSanction = idTypeSanction;
     }
 
-    public String getNom_Type_Sanction() {
-        return this.Nom_Type_Sanction;
+    public String getNomTypeSanction() {
+        return this.nomTypeSanction;
     }
 
-    public void setNom_Type_Sanction(String Nom_Type_Sanction) {
-        this.Nom_Type_Sanction = Nom_Type_Sanction;
+    public void setNomTypeSanction(String nomTypeSanction) {
+        this.nomTypeSanction = nomTypeSanction;
     }
 
 }

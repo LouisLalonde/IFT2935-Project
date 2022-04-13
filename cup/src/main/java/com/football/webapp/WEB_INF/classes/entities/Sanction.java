@@ -14,76 +14,76 @@ public class Sanction {
     @Id
     @GeneratedValue(generator = "generator")
     @Column(name = "ID_Sanction")
-    private Integer ID_Sanction;
+    private Integer idSanction;
     @Column(name = "ID_Joueur")
-    private Integer ID_Joueur;
+    private Integer idJoueur;
     @Column(name = "ID_Arbitre")
-    private Integer ID_Arbitre;
+    private Integer idArbitre;
     @Column(name = "ID_Match")
-    private Integer ID_Match;
+    private Integer idMatch;
     @Column(name = "Temps")
-    private Time Temps;
+    private Time temps;
     @Column(name = "ID_Type_Sanction")
-    private Integer ID_Type_Sanction;
+    private Integer idTypeSanction;
 
     public Sanction(){}
 
-    public Sanction(Integer ID_Sanction, Integer ID_Joueur, Integer ID_Arbitre, Integer ID_Match, Time Temps, Integer ID_Type_Sanction) {
-        this.ID_Sanction = ID_Sanction;
-        this.ID_Joueur = ID_Joueur;
-        this.ID_Arbitre = ID_Arbitre;
-        this.ID_Match = ID_Match;
-        this.Temps = Temps;
-        this.ID_Type_Sanction = ID_Type_Sanction;
+
+    public Sanction(Integer idSanction, Integer idJoueur, Integer idArbitre, Integer idMatch, Time temps, Integer idTypeSanction) {
+        this.idSanction = idSanction;
+        this.idJoueur = idJoueur;
+        this.idArbitre = idArbitre;
+        this.idMatch = idMatch;
+        this.temps = temps;
+        this.idTypeSanction = idTypeSanction;
     }
 
-
-    public Integer getID_Sanction() {
-        return this.ID_Sanction;
+    public Integer getIdSanction() {
+        return this.idSanction;
     }
 
-    public void setID_Sanction(Integer ID_Sanction) {
-        this.ID_Sanction = ID_Sanction;
+    public void setIdSanction(Integer idSanction) {
+        this.idSanction = idSanction;
     }
 
-    public Integer getID_Joueur() {
-        return this.ID_Joueur;
+    public Integer getIdJoueur() {
+        return this.idJoueur;
     }
 
-    public void setID_Joueur(Integer ID_Joueur) {
-        this.ID_Joueur = ID_Joueur;
+    public void setIdJoueur(Integer idJoueur) {
+        this.idJoueur = idJoueur;
     }
 
-    public Integer getID_Arbitre() {
-        return this.ID_Arbitre;
+    public Integer getIdArbitre() {
+        return this.idArbitre;
     }
 
-    public void setID_Arbitre(Integer ID_Arbitre) {
-        this.ID_Arbitre = ID_Arbitre;
+    public void setIdArbitre(Integer idArbitre) {
+        this.idArbitre = idArbitre;
     }
 
-    public Integer getID_Match() {
-        return this.ID_Match;
+    public Integer getIdMatch() {
+        return this.idMatch;
     }
 
-    public void setID_Match(Integer ID_Match) {
-        this.ID_Match = ID_Match;
+    public void setIdMatch(Integer idMatch) {
+        this.idMatch = idMatch;
     }
 
-    public Time getTime() {
-        return this.Temps;
+    public Time getTemps() {
+        return this.temps;
     }
 
-    public void setTime(Time Time) {
-        this.Temps = Time;
+    public void setTemps(Time temps) {
+        this.temps = temps;
     }
 
-    public Integer getID_Type_Sanction() {
-        return this.ID_Type_Sanction;
+    public Integer getIdTypeSanction() {
+        return this.idTypeSanction;
     }
 
-    public void setID_Type_Sanction(Integer ID_Type_Sanction) {
-        this.ID_Type_Sanction = ID_Type_Sanction;
+    public void setIdTypeSanction(Integer idTypeSanction) {
+        this.idTypeSanction = idTypeSanction;
     }
 
 }

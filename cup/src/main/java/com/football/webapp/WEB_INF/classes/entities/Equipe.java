@@ -13,34 +13,33 @@ public class Equipe {
     @Id
     @GeneratedValue(generator = "generator")
     @Column(name = "ID_Equipe")
-    private Integer ID_Equipe;
+    private Integer idEquipe;
     @Column(name = "Pays_Equipe")
-    private String Pays_Equipe;
+    private String paysEquipe;
 
 
     public Equipe(){}
 
 
-    public Equipe(Integer ID_Equipe, String Pays_Equipe) {
-        this.ID_Equipe = ID_Equipe;
-        this.Pays_Equipe = Pays_Equipe;
+    public Equipe(Integer idEquipe, String paysEquipe) {
+        this.idEquipe = idEquipe;
+        this.paysEquipe = paysEquipe;
     }
 
-
-    public Integer getID_Equipe() {
-        return this.ID_Equipe;
+    public Integer getIdEquipe() {
+        return this.idEquipe;
     }
 
-    public void setID_Equipe(Integer ID_Equipe) {
-        this.ID_Equipe = ID_Equipe;
+    public void setIdEquipe(Integer idEquipe) {
+        this.idEquipe = idEquipe;
     }
 
-    public String getPays_Equipe() {
-        return this.Pays_Equipe;
+    public String getPaysEquipe() {
+        return this.paysEquipe;
     }
 
-    public void setPays_Equipe(String Pays_Equipe) {
-        this.Pays_Equipe = Pays_Equipe;
+    public void setPaysEquipe(String paysEquipe) {
+        this.paysEquipe = paysEquipe;
     }
-
+    
 }

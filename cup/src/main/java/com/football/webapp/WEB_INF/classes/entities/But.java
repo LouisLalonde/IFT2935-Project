@@ -14,77 +14,78 @@ public class But {
     @Id
     @GeneratedValue(generator = "generator")
     @Column(name = "ID_But")
-    private Integer ID_But;
+    private Integer idBut;
     @Column(name = "Gardien")
-    private Integer Gardien;
+    private Integer gardien;
     @Column(name = "Buteur")
-    private Integer Buteur;
+    private Integer buteur;
     @Column(name = "ID_Match")
-    private Integer ID_Match;
+    private Integer idMatch;
     @Column(name = "Temps")
     private Time Temps;
     @Column(name = "ID_Type_But")
-    private Integer ID_Type_But;
+    private Integer idTypeBut;
 
 
     public But() {}
 
-    public But(Integer ID_But, Integer Gardien, Integer Buteur, Integer ID_Match, Time Temps, Integer ID_Type_But) {
-        this.ID_But = ID_But;
-        this.Gardien = Gardien;
-        this.Buteur = Buteur;
-        this.ID_Match = ID_Match;
+
+    public But(Integer idBut, Integer gardien, Integer buteur, Integer idMatch, Time Temps, Integer idTypeBut) {
+        this.idBut = idBut;
+        this.gardien = gardien;
+        this.buteur = buteur;
+        this.idMatch = idMatch;
         this.Temps = Temps;
-        this.ID_Type_But = ID_Type_But;
+        this.idTypeBut = idTypeBut;
+    }
+    
+
+    public Integer getIdBut() {
+        return this.idBut;
     }
 
-
-    public Integer getID_But() {
-        return this.ID_But;
-    }
-
-    public void setID_But(Integer ID_But) {
-        this.ID_But = ID_But;
+    public void setIdBut(Integer idBut) {
+        this.idBut = idBut;
     }
 
     public Integer getGardien() {
-        return this.Gardien;
+        return this.gardien;
     }
 
-    public void setGardien(Integer Gardien) {
-        this.Gardien = Gardien;
+    public void setGardien(Integer gardien) {
+        this.gardien = gardien;
     }
 
     public Integer getButeur() {
-        return this.Buteur;
+        return this.buteur;
     }
 
-    public void setButeur(Integer Buteur) {
-        this.Buteur = Buteur;
+    public void setButeur(Integer buteur) {
+        this.buteur = buteur;
     }
 
-    public Integer getID_Match() {
-        return this.ID_Match;
+    public Integer getIdMatch() {
+        return this.idMatch;
     }
 
-    public void setID_Match(Integer ID_Match) {
-        this.ID_Match = ID_Match;
+    public void setIdMatch(Integer idMatch) {
+        this.idMatch = idMatch;
     }
 
-    public Time getTime() {
+    public Time getTemps() {
         return this.Temps;
     }
 
-    public void setTime(Time Temps) {
+    public void setTemps(Time Temps) {
         this.Temps = Temps;
     }
 
-    public Integer getID_Type_But() {
-        return this.ID_Type_But;
+    public Integer getIdTypeBut() {
+        return this.idTypeBut;
     }
 
-    public void setID_Type_But(Integer ID_Type_But) {
-        this.ID_Type_But = ID_Type_But;
-    }
+    public void setIdTypeBut(Integer idTypeBut) {
+        this.idTypeBut = idTypeBut;
+    }    
 
 }

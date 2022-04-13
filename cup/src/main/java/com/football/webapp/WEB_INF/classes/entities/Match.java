@@ -13,156 +13,156 @@ public class Match {
     @Id
     @GeneratedValue(generator = "generator")
     @Column(name = "ID_Match")
-    private Integer ID_Match;
+    private Integer idMatch;
     @Column(name = "Equipe_Gagnante")
-    private Integer Equipe_Gagnante;
+    private Integer equipeGagnante;
     @Column(name = "Equipe_Perdante")
-    private Integer Equipe_Perdante;
+    private Integer equipePerdante;
     @Column(name = "Arbitre")
-    private Integer Arbitre;
+    private Integer arbitre;
     @Column(name = "Arbitre_Assistant_1")
-    private Integer Arbitre_Assistant_1;
+    private Integer arbitreAssistant_1;
     @Column(name = "Arbitre_Assistant_2")
-    private Integer Arbitre_Assistant_2;
+    private Integer arbitreAssistant_2;
     @Column(name = "Arbitre_Assistant_3")
-    private Integer Arbitre_Assistant_3;
+    private Integer arbitreAssistant_3;
     @Column(name = "MVP")
-    private Integer MVP;
+    private Integer mvp;
     @Column(name = "Annee")
-    private Integer Annee;
+    private Integer annee;
     @Column(name = "Stade")
-    private String Stade;
+    private String stade;
     @Column(name = "Rang")
-    private String Rang;
+    private String rang;
     @Column(name = "Score")
-    private String Score;
+    private String score;
     @Column(name = "Duree")
-    private Integer Duree;
+    private Integer duree;
 
     public Match(){}
 
 
-    public Match(Integer ID_Match, Integer Equipe_Gagnante, Integer Equipe_Perdante, Integer Arbitre,
-     Integer Arbitre_Assistant_1, Integer Arbitre_Assistant_2, Integer Arbitre_Assistant_3, Integer MVP,
-      Integer Annee, String Stade, String Rang, String Score, Integer Duree) {
-        this.ID_Match = ID_Match;
-        this.Equipe_Gagnante = Equipe_Gagnante;
-        this.Equipe_Perdante = Equipe_Perdante;
-        this.Arbitre = Arbitre;
-        this.Arbitre_Assistant_1 = Arbitre_Assistant_1;
-        this.Arbitre_Assistant_2 = Arbitre_Assistant_2;
-        this.Arbitre_Assistant_3 = Arbitre_Assistant_3;
-        this.MVP = MVP;
-        this.Annee = Annee;
-        this.Stade = Stade;
-        this.Rang = Rang;
-        this.Score = Score;
-        this.Duree = Duree;
+    public Match(Integer idMatch, Integer equipeGagnante, Integer equipePerdante, Integer arbitre,
+     Integer arbitreAssistant_1, Integer arbitreAssistant_2, Integer arbitreAssistant_3,
+      Integer mvp, Integer annee, String stade, String rang, String score, Integer duree) {
+        this.idMatch = idMatch;
+        this.equipeGagnante = equipeGagnante;
+        this.equipePerdante = equipePerdante;
+        this.arbitre = arbitre;
+        this.arbitreAssistant_1 = arbitreAssistant_1;
+        this.arbitreAssistant_2 = arbitreAssistant_2;
+        this.arbitreAssistant_3 = arbitreAssistant_3;
+        this.mvp = mvp;
+        this.annee = annee;
+        this.stade = stade;
+        this.rang = rang;
+        this.score = score;
+        this.duree = duree;
     }
 
 
-    public Integer getID_Match() {
-        return this.ID_Match;
+    public Integer getIdMatch() {
+        return this.idMatch;
     }
 
-    public void setID_Match(Integer ID_Match) {
-        this.ID_Match = ID_Match;
+    public void setIdMatch(Integer idMatch) {
+        this.idMatch = idMatch;
     }
 
-    public Integer getEquipe_Gagnante() {
-        return this.Equipe_Gagnante;
+    public Integer getEquipeGagnante() {
+        return this.equipeGagnante;
     }
 
-    public void setEquipe_Gagnante(Integer Equipe_Gagnante) {
-        this.Equipe_Gagnante = Equipe_Gagnante;
+    public void setEquipeGagnante(Integer equipeGagnante) {
+        this.equipeGagnante = equipeGagnante;
     }
 
-    public Integer getEquipe_Perdante() {
-        return this.Equipe_Perdante;
+    public Integer getEquipePerdante() {
+        return this.equipePerdante;
     }
 
-    public void setEquipe_Perdante(Integer Equipe_Perdante) {
-        this.Equipe_Perdante = Equipe_Perdante;
+    public void setEquipePerdante(Integer equipePerdante) {
+        this.equipePerdante = equipePerdante;
     }
 
     public Integer getArbitre() {
-        return this.Arbitre;
+        return this.arbitre;
     }
 
-    public void setArbitre(Integer Arbitre) {
-        this.Arbitre = Arbitre;
+    public void setArbitre(Integer arbitre) {
+        this.arbitre = arbitre;
     }
 
-    public Integer getArbitre_Assistant_1() {
-        return this.Arbitre_Assistant_1;
+    public Integer getArbitreAssistant_1() {
+        return this.arbitreAssistant_1;
     }
 
-    public void setArbitre_Assistant_1(Integer Arbitre_Assistant_1) {
-        this.Arbitre_Assistant_1 = Arbitre_Assistant_1;
+    public void setArbitreAssistant_1(Integer arbitreAssistant_1) {
+        this.arbitreAssistant_1 = arbitreAssistant_1;
     }
 
-    public Integer getArbitre_Assistant_2() {
-        return this.Arbitre_Assistant_2;
+    public Integer getArbitreAssistant_2() {
+        return this.arbitreAssistant_2;
     }
 
-    public void setArbitre_Assistant_2(Integer Arbitre_Assistant_2) {
-        this.Arbitre_Assistant_2 = Arbitre_Assistant_2;
+    public void setArbitreAssistant_2(Integer arbitreAssistant_2) {
+        this.arbitreAssistant_2 = arbitreAssistant_2;
     }
 
-    public Integer getArbitre_Assistant_3() {
-        return this.Arbitre_Assistant_3;
+    public Integer getArbitreAssistant_3() {
+        return this.arbitreAssistant_3;
     }
 
-    public void setArbitre_Assistant_3(Integer Arbitre_Assistant_3) {
-        this.Arbitre_Assistant_3 = Arbitre_Assistant_3;
+    public void setArbitreAssistant_3(Integer arbitreAssistant_3) {
+        this.arbitreAssistant_3 = arbitreAssistant_3;
     }
 
-    public Integer getMVP() {
-        return this.MVP;
+    public Integer getMvp() {
+        return this.mvp;
     }
 
-    public void setMVP(Integer MVP) {
-        this.MVP = MVP;
+    public void setMvp(Integer mvp) {
+        this.mvp = mvp;
     }
 
     public Integer getAnnee() {
-        return this.Annee;
+        return this.annee;
     }
 
-    public void setAnnee(Integer Annee) {
-        this.Annee = Annee;
+    public void setAnnee(Integer annee) {
+        this.annee = annee;
     }
 
     public String getStade() {
-        return this.Stade;
+        return this.stade;
     }
 
-    public void setStade(String Stade) {
-        this.Stade = Stade;
+    public void setStade(String stade) {
+        this.stade = stade;
     }
 
     public String getRang() {
-        return this.Rang;
+        return this.rang;
     }
 
-    public void setRang(String Rang) {
-        this.Rang = Rang;
+    public void setRang(String rang) {
+        this.rang = rang;
     }
 
     public String getScore() {
-        return this.Score;
+        return this.score;
     }
 
-    public void setScore(String Score) {
-        this.Score = Score;
+    public void setScore(String score) {
+        this.score = score;
     }
 
     public Integer getDuree() {
-        return this.Duree;
+        return this.duree;
     }
 
-    public void setDuree(Integer Duree) {
-        this.Duree = Duree;
+    public void setDuree(Integer duree) {
+        this.duree = duree;
     }
     
 }

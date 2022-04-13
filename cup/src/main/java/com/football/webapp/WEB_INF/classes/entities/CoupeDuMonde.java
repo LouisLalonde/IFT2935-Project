@@ -14,54 +14,55 @@ public class CoupeDuMonde {
     @Id
     @GeneratedValue(generator = "generator")
     @Column(name = "Annee")
-    private Integer Annee; 
+    private Integer annee; 
     @Column(name = "Pays_Coupe")
-    private String Pays_Coupe; 
+    private String paysCoupe; 
     @Column(name = "Start_Date")
-    private Date Start_Date; 
+    private Date startDate; 
     @Column(name = "End_date")
-    private Date End_date;
+    private Date endDate;
 
-    public CoupeDuMonde(){}    
+    public CoupeDuMonde(){}
 
-    public CoupeDuMonde(Integer Annee, String Pays_Coupe, Date Start_Date, Date End_date) {
-        this.Annee = Annee;
-        this.Pays_Coupe = Pays_Coupe;
-        this.Start_Date = Start_Date;
-        this.End_date = End_date;
+
+    public CoupeDuMonde(Integer annee, String paysCoupe, Date startDate, Date endDate) {
+        this.annee = annee;
+        this.paysCoupe = paysCoupe;
+        this.startDate = startDate;
+        this.endDate = endDate;
     }
 
 
     public Integer getAnnee() {
-        return this.Annee;
+        return this.annee;
     }
 
-    public void setAnnee(Integer Annee) {
-        this.Annee = Annee;
+    public void setAnnee(Integer annee) {
+        this.annee = annee;
     }
 
-    public String getPays_Coupe() {
-        return this.Pays_Coupe;
+    public String getPaysCoupe() {
+        return this.paysCoupe;
     }
 
-    public void setPays_Coupe(String Pays_Coupe) {
-        this.Pays_Coupe = Pays_Coupe;
+    public void setPaysCoupe(String paysCoupe) {
+        this.paysCoupe = paysCoupe;
     }
 
-    public Date getStart_Date() {
-        return this.Start_Date;
+    public Date getStartDate() {
+        return this.startDate;
     }
 
-    public void setStart_Date(Date Start_Date) {
-        this.Start_Date = Start_Date;
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
     }
 
-    public Date getEnd_date() {
-        return this.End_date;
+    public Date getEndDate() {
+        return this.endDate;
     }
 
-    public void setEnd_date(Date End_date) {
-        this.End_date = End_date;
+    public void setEndDate(Date endDate) {
+        this.endDate = endDate;
     }
-
+    
 }

@@ -14,54 +14,55 @@ public class Blessure {
     @Id
     @GeneratedValue(generator = "generator")
     @Column(name = "ID_Blessure")
-    private Integer ID_Blessure;
+    private Integer idBlessure;
     @Column(name = "ID_Joueur")
-    private Integer ID_Joueur;
+    private Integer idJoueur;
     @Column(name = "Diagnostic")
-    private String Diagnostic;
+    private String diagnostic;
     @Column(name = "Date")
-    private Date Date;
+    private Date date;
 
     public Blessure(){}
 
-    public Blessure(Integer ID_Blessure, Integer ID_Joueur, String Diagnostic, Date Date) {
-        this.ID_Blessure = ID_Blessure;
-        this.ID_Joueur = ID_Joueur;
-        this.Diagnostic = Diagnostic;
-        this.Date = Date;
+
+    public Blessure(Integer idBlessure, Integer idJoueur, String diagnostic, Date date) {
+        this.idBlessure = idBlessure;
+        this.idJoueur = idJoueur;
+        this.diagnostic = diagnostic;
+        this.date = date;
+    }
+    
+
+    public Integer getIdBlessure() {
+        return this.idBlessure;
     }
 
-
-    public Integer getID_Blessure() {
-        return this.ID_Blessure;
+    public void setIdBlessure(Integer idBlessure) {
+        this.idBlessure = idBlessure;
     }
 
-    public void setID_Blessure(Integer ID_Blessure) {
-        this.ID_Blessure = ID_Blessure;
+    public Integer getIdJoueur() {
+        return this.idJoueur;
     }
 
-    public Integer getID_Joueur() {
-        return this.ID_Joueur;
-    }
-
-    public void setID_Joueur(Integer ID_Joueur) {
-        this.ID_Joueur = ID_Joueur;
+    public void setIdJoueur(Integer idJoueur) {
+        this.idJoueur = idJoueur;
     }
 
     public String getDiagnostic() {
-        return this.Diagnostic;
+        return this.diagnostic;
     }
 
-    public void setDiagnostic(String Diagnostic) {
-        this.Diagnostic = Diagnostic;
+    public void setDiagnostic(String diagnostic) {
+        this.diagnostic = diagnostic;
     }
 
     public Date getDate() {
-        return this.Date;
+        return this.date;
     }
 
-    public void setDate(Date Date) {
-        this.Date = Date;
+    public void setDate(Date date) {
+        this.date = date;
     }
-
+    
 }

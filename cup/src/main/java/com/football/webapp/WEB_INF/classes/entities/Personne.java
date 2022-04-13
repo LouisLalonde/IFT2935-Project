@@ -8,43 +8,44 @@ import jakarta.persistence.MappedSuperclass;
 @MappedSuperclass
 public abstract class Personne {
     @Column(name = "Prenom")
-    private String Prenom;
+    private String prenom;
     @Column(name = "Nom")
-    private String Nom;
+    private String nom;
     @Column(name = "Date_Naissance")
-    private Date Date_Naissance;
+    private Date dateNaissance;
 
     public Personne(){}
 
-    public Personne(String Prenom, String Nom, Date Date_Naissance) {
-        this.Prenom = Prenom;
-        this.Nom = Nom;
-        this.Date_Naissance = Date_Naissance;
+
+    public Personne(String prenom, String nom, Date dateNaissance) {
+        this.prenom = prenom;
+        this.nom = nom;
+        this.dateNaissance = dateNaissance;
     }
-
-
+    
     public String getPrenom() {
-        return this.Prenom;
+        return this.prenom;
     }
 
-    public void setPrenom(String Prenom) {
-        this.Prenom = Prenom;
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
     }
 
     public String getNom() {
-        return this.Nom;
+        return this.nom;
     }
 
-    public void setNom(String Nom) {
-        this.Nom = Nom;
+    public void setNom(String nom) {
+        this.nom = nom;
     }
 
-    public Date getDate_Naissance() {
-        return this.Date_Naissance;
+    public Date getDateNaissance() {
+        return this.dateNaissance;
     }
 
-    public void setDate_Naissance(Date Date_Naissance) {
-        this.Date_Naissance = Date_Naissance;
+    public void setDateNaissance(Date dateNaissance) {
+        this.dateNaissance = dateNaissance;
     }
+    
 
 }
