@@ -104,13 +104,6 @@ On pourra inclure dans chaque entité tous les éléments réalistes possibles �
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
 <!-- ACKNOWLEDGMENTS -->
 ## Remerciments
 
