@@ -12,13 +12,13 @@
 /home/louis/Documents/UDEM/S4/IFT2935-Project/cup/src/main/java/com/football/api/services/DataBind.java
 /home/louis/Documents/UDEM/S4/IFT2935-Project/cup/src/main/java/com/football/api/models/CrudOperators/Update.java
 /home/louis/Documents/UDEM/S4/IFT2935-Project/cup/src/main/java/com/football/api/models/DatabaseModel.java
-/home/louis/Documents/UDEM/S4/IFT2935-Project/cup/src/main/java/com/football/webapp/WEB_INF/views/LayoutSample.java
 /home/louis/Documents/UDEM/S4/IFT2935-Project/cup/src/main/java/com/football/webapp/WEB_INF/classes/entities/TypeBut.java
 /home/louis/Documents/UDEM/S4/IFT2935-Project/cup/src/main/java/com/football/webapp/WEB_INF/classes/entities/Staff.java
 /home/louis/Documents/UDEM/S4/IFT2935-Project/cup/src/main/java/com/football/webapp/WEB_INF/classes/entities/Arbitre.java
 /home/louis/Documents/UDEM/S4/IFT2935-Project/cup/src/main/java/com/football/webapp/WEB_INF/classes/entities/Blessure.java
 /home/louis/Documents/UDEM/S4/IFT2935-Project/cup/src/main/java/com/football/api/models/CrudOperators/Delete.java
 /home/louis/Documents/UDEM/S4/IFT2935-Project/cup/src/main/java/com/football/webapp/WEB_INF/classes/entities/Personne.java
+/home/louis/Documents/UDEM/S4/IFT2935-Project/cup/src/main/java/com/football/webapp/WEB_INF/views/Home.java
 /home/louis/Documents/UDEM/S4/IFT2935-Project/cup/src/main/java/com/football/webapp/WEB_INF/classes/utility/AbstractedReadRequest.java
 /home/louis/Documents/UDEM/S4/IFT2935-Project/cup/src/main/java/com/football/api/models/QueryBuilderModel.java
 /home/louis/Documents/UDEM/S4/IFT2935-Project/cup/src/main/java/com/football/api/models/CrudOperators/Read.java

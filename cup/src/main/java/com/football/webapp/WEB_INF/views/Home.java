@@ -69,7 +69,7 @@ public class Home extends Application {
         Scene scene = new Scene(border);
         stage.setScene(scene);
         stage.setTitle("Projet du cours IFT 2935 -- La coupe du monde des nations du football");
-        stage.setHeight(300);
+        stage.setHeight(500);
         stage.setWidth(1000);
         stage.show();
 
@@ -124,11 +124,11 @@ public class Home extends Application {
 
                      for (MeilleurPointeurCoupeDuMonde joueur : meilleurPointeurCoupeDuMonde) {
                          display.append(
-                             "( Prenom Joueur: " + 
-                             joueur.getPrenom() + " ;  Nom Joueur: " +
-                             joueur.getNom() + " ; Pays Joueur: " +
+                             "( Prénom joueur: " + 
+                             joueur.getPrenom() + " ;  Nom joueur: " +
+                             joueur.getNom() + " ; Pays joueur: " +
                              joueur.getPays_Equipe() +
-                             " ) "
+                             " ) \n"
                          );
                     };
 
@@ -159,12 +159,12 @@ public class Home extends Application {
 
                     for (PermierArbitrePenalite arbitre : permierArbitrePenalty) {
                         display.append(
-                            "( Prenom Arbitre: " + 
-                            arbitre.getPrenom() + " ;  Nom Arbitre: " +
-                            arbitre.getNom() + " ; Equipe Gaganante: " +
-                            arbitre.getEquipe_Gagnante() +" ; Equipe Perdante: " +
+                            "( Prenom arbitre: " + 
+                            arbitre.getPrenom() + " ;  Nom arbitre: " +
+                            arbitre.getNom() + " ; Equipe gaganante: " +
+                            arbitre.getEquipe_Gagnante() +" ; Equipe perdante: " +
                             arbitre.getEquipe_Perdante() + 
-                            " ) "
+                            " )\n"
                         );
                     };
 
