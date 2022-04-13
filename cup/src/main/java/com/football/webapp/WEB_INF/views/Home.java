@@ -4,16 +4,12 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.football.api.models.CrudOperators.Enum.Operation;
 import com.football.webapp.WEB_INF.classes.complex_entities.MeilleurPointeurCoupeDuMonde;
 import com.football.webapp.WEB_INF.classes.complex_entities.PermierArbitrePenalite;
-<<<<<<< HEAD:cup/src/main/java/com/football/webapp/WEB_INF/views/Home.java
 import com.football.webapp.WEB_INF.classes.entities.Arbitre;
 import com.football.webapp.WEB_INF.classes.entities.Joueur;
 import com.football.webapp.WEB_INF.classes.entities.Match;
 import com.football.webapp.WEB_INF.classes.utility.RequestObject;
 import com.football.webapp.WEB_INF.services.UserService;
 
-=======
-import com.football.webapp.WEB_INF.classes.utility.AbstractedReadRequest;
->>>>>>> 9518d6037c99829c46f7ebee5fb8baa36129fe34:cup/src/main/java/com/football/webapp/WEB_INF/views/LayoutSample.java
 import org.hibernate.Session;
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -96,13 +92,9 @@ public class Home extends Application {
                     title.setText("Trouver le nombre de Carton Jaune donné par Clement Turpin durant toutes les coupes du monde qu'il a arbitré.");
 
                 try {
-<<<<<<< HEAD:cup/src/main/java/com/football/webapp/WEB_INF/views/Home.java
                     ArrayList<Integer> arbitres = userService.appUseServices(requestObject.build(session, Operation.READ, "1",  Integer.class))
                     .appUseDataBase().dataBaseService().main();
                     System.out.println(arbitres);
-=======
-                    ArrayList<Integer> arbitres  = new AbstractedReadRequest().execute(session, Operation.READ, "1", Integer.class);
->>>>>>> 9518d6037c99829c46f7ebee5fb8baa36129fe34:cup/src/main/java/com/football/webapp/WEB_INF/views/LayoutSample.java
 
                     answer.setText(arbitres.get(0) + " Carton(s) Jaune(s)");
                     
@@ -122,14 +114,10 @@ public class Home extends Application {
                 title.setText("Trouver le ou les joueurs qui a mis le plus de but en combinant les coupes du monde des années 1966 à 1978, retourner son nom, prénom et son pays. ");
                 
             try {
-<<<<<<< HEAD:cup/src/main/java/com/football/webapp/WEB_INF/views/Home.java
 
                     ArrayList<MeilleurPointeurCoupeDuMonde> meilleurPointeurCoupeDuMonde = userService.appUseServices(requestObject.build(session, Operation.READ, "2",  MeilleurPointeurCoupeDuMonde.class))
                     .appUseDataBase().dataBaseService().main();
                     System.out.println(meilleurPointeurCoupeDuMonde);
-=======
-                    ArrayList<MeilleurPointeurCoupeDuMonde> meilleurPointeurCoupeDuMonde = new AbstractedReadRequest().execute(session, Operation.READ, "2", MeilleurPointeurCoupeDuMonde.class);
->>>>>>> 9518d6037c99829c46f7ebee5fb8baa36129fe34:cup/src/main/java/com/football/webapp/WEB_INF/views/LayoutSample.java
 
                     StringBuilder display = new StringBuilder();
 
@@ -166,11 +154,7 @@ public class Home extends Application {
                     ArrayList<PermierArbitrePenalite> permierArbitrePenalty = userService.appUseServices(requestObject.build(session, Operation.READ, "3",  PermierArbitrePenalite.class))
                     .appUseDataBase().dataBaseService().main();
 
-<<<<<<< HEAD:cup/src/main/java/com/football/webapp/WEB_INF/views/Home.java
                     System.out.println(permierArbitrePenalty);
-=======
-                    ArrayList<PermierArbitrePenalite> permierArbitrePenalty = new AbstractedReadRequest().execute(session, Operation.READ, "3", PermierArbitrePenalite.class);
->>>>>>> 9518d6037c99829c46f7ebee5fb8baa36129fe34:cup/src/main/java/com/football/webapp/WEB_INF/views/LayoutSample.java
                     StringBuilder display = new StringBuilder();
 
                     for (PermierArbitrePenalite arbitre : permierArbitrePenalty) {
