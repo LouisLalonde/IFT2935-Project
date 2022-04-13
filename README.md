@@ -79,12 +79,12 @@ On pourra inclure dans chaque entité tous les éléments réalistes possibles �
 
 - Avoir une version récente de Java
 - Avoir une base de donnée locale avec comme nom : football
-- L'utilisateur postgres doit avoir comme mot de passe postgres
+- L'utilisateur postgres doit avoir comme mot de passe: postgres
 - Exécuter le fichier d'importation des données import.sql
   ```sh
   psql -h localhost -U postgres -d football -f import.sql
   ```
-  - Exécuter le jar
+- Exécuter le jar
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
