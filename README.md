@@ -70,6 +70,17 @@ Git clone the repository
   ```sh
   psql -h localhost -U postgres -d football -f import.sql
   ```
+  
+### Préalable pour la production
+
+- Avoir une version récente de Java
+- Avoir une base de donnée locale avec comme nom : football
+- L'utilisateur postgres doit avoir comme mot de passe postgres
+- Exécuter le fichier d'importation des données import.sql
+ ```sh
+  psql -h localhost -U postgres -d football -f import.sql
+  ```
+  - Exécuter le jar
 
 ### Installation
 
