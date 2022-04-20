@@ -17,8 +17,6 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
 
 <br />
 <div align="center">
@@ -53,13 +51,17 @@ On pourra inclure dans chaque entité tous les éléments réalistes possibles �
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/LouisLalonde/IFT2935-Project.git
+   ```
 
 <!-- GETTING STARTED -->
 ## Pour débuter le projet
 
-Git clone the repository
-
-### Préalable pour le développement
+### Préalables pour le développement
 
 - JDK >= 17.0
 - Apache Maven 3.8.5
@@ -70,13 +72,16 @@ Git clone the repository
   ```sh
   psql -h localhost -U postgres -d football -f import.sql
   ```
+  
+### Préalables pour la production
 
-### Installation
-
-1. Clone the repo
-   ```sh
-   git clone https://github.com/LouisLalonde/IFT2935-Project.git
-   ```
+- Avoir une version récente de Java
+- Avoir une base de donnée locale avec comme nom : football
+- Avoir un utilisateur postgres dont le mot de passe est: postgres
+- Exécuter le fichier d'importation des données import.sql qui est fourni avec le programme
+  ```sh
+  psql -h localhost -U postgres -d football -f import.sql
+  ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -84,24 +89,28 @@ Git clone the repository
 <!-- USAGE EXAMPLES -->
 ## Guide d'utilisation
 
-- Lancer le fichier exécutable jar
-- Cliquer sur un des 4 boutons pour exécuter une requête vers la base de données
+- Assurez-vous que toutes les étapes de la section <b>préalable pour la production</b> sont complétées.
+- Lancer le fichier exécutable jar.
+Disposés sur l'en-tête de l'interface utilisateur de l'application, se trouvent quatres boutons.
+
+Chacun d'entre-eux permet l'exécution d'une requête.
+
+Après que la requête ait été traitée par les dorsaux puis envoyée au système de gestion de données,
+les résultats sont affichés dans la boite principale de l'interface utilisateur.
+
+Dépendant du type de requête effectuée, les résultats retournés sont affichés sous forme phrase.s
+ou bien sous forme de tuple.s.
+
+Pour en savoir plus sur les différentes requêtes, veuillez consulter le rapport de l'application.
 
 <!-- ROADMAP -->
 ## Feuille de route
 
-- [ ] Développer le back-end
-- [ ] Utiliser le cadre de développement Hibernate
-- [ ] Développer le front-end
+- [X] Développer le back-end
+- [X] Utiliser le cadre de développement Hibernate
+- [X] Développer le front-end
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <!-- ACKNOWLEDGMENTS -->
 ## Remerciments

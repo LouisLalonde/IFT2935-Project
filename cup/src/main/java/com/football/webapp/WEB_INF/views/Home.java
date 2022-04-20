@@ -64,7 +64,7 @@ public class Home extends Application {
  
         Scene scene = new Scene(border);
         stage.setScene(scene);
-        stage.setTitle("Projet du cours IFT 2935 -- La coupe du monde des nations du football");
+        stage.setTitle("Projet du cours IFT2935 -- La coupe du monde des nations du football");
         stage.setMaximized(true); 
         stage.show();
 
@@ -84,7 +84,7 @@ public class Home extends Application {
 
                 @Override
                 public void handle(ActionEvent event) {
-                    title.setText("Trouver le nombre de Carton Jaune donné par Clement Turpin durant toutes les coupes du monde qu'il a arbitré.");
+                    title.setText("Trouver le nombre de carton jaune donné par Clement Turpin durant toutes les coupes du monde qu'il a arbitrées.");
 
                 try {
                     ArrayList<Integer> arbitres = userService.appUseServices(requestObject.build(session, Operation.READ, "1",  Integer.class))
@@ -106,7 +106,7 @@ public class Home extends Application {
         button2.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                title.setText("Trouver le ou les joueurs qui a mis le plus de but en combinant les coupes du monde des années 1966 à 1978, retourner son nom, prénom et son pays. ");
+                title.setText("Trouver le ou les joueurs qui ont mis le plus de but en combinant les coupes du monde des années 1966 à 1978. Retourner son nom, prénom et son pays.");
                 
             try {
 
@@ -143,7 +143,7 @@ public class Home extends Application {
         button3.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                title.setText("Trouver l'arbitre du premier match de la coupe du monde 1974 où un joueur a marqué un penalty, retourner les noms des deux pays jouant lors de ce match ainsi que le nom et prénom de l’arbitre.");
+                title.setText("Trouver l'arbitre du premier match de la coupe du monde 1974 ou un joueur a marqué un penalty. Retourner les noms des deux pays jouant lors de ce match ainsi que le nom et prénom de l’arbitre.");
                  
                 try {
                     ArrayList<PermierArbitrePenalite> permierArbitrePenalty = userService.appUseServices(requestObject.build(session, Operation.READ, "3",  PermierArbitrePenalite.class))
@@ -179,7 +179,7 @@ public class Home extends Application {
         button4.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                title.setText("Trouver le nombre de but marqué après 00:09:00 minutes par des joueurs dont le poste est milieu_centre (AC) durant l’année 1978.");
+                title.setText("Trouver le nombre de buts marqués après la 9ième minutes par des joueurs dont le poste est milieu centre (AC) durant l'année 1978.");
             
                 try {
                     ArrayList<Integer> buts = userService.appUseServices(requestObject.build(session, Operation.READ, "4",  Integer.class))
