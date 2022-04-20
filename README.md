@@ -63,7 +63,7 @@ On pourra inclure dans chaque entité tous les éléments réalistes possibles �
 <!-- GETTING STARTED -->
 ## Pour débuter le projet
 
-### Préalable pour le développement
+### Préalables pour le développement
 
 - JDK >= 17.0
 - Apache Maven 3.8.5
@@ -75,16 +75,15 @@ On pourra inclure dans chaque entité tous les éléments réalistes possibles �
   psql -h localhost -U postgres -d football -f import.sql
   ```
   
-### Préalable pour la production
+### Préalables pour la production
 
 - Avoir une version récente de Java
 - Avoir une base de donnée locale avec comme nom : football
-- L'utilisateur postgres doit avoir comme mot de passe: postgres
-- Exécuter le fichier d'importation des données import.sql
+- Avoir un utilisateur postgres dont le mot de passe est: postgres
+- Exécuter le fichier d'importation des données import.sql qui est fourni avec le programme
   ```sh
   psql -h localhost -U postgres -d football -f import.sql
   ```
-- Exécuter le jar
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -92,15 +91,24 @@ On pourra inclure dans chaque entité tous les éléments réalistes possibles �
 <!-- USAGE EXAMPLES -->
 ## Guide d'utilisation
 
-- Lancer le fichier exécutable jar
-- Cliquer sur un des 4 boutons pour exécuter une requête vers la base de données
+- Assurer vous que toues les étapes de la secetion <b>préalable pour la production</b> sont complétées.
+- Lancer le fichier exécutable jar.
+Disposés sur l'en-tête de l'interface utilisateur de l'application, se trouve quatres boutons.
+Chacun d'entre-eux permettent l'exécution d'un requête.
+Après que la requête ait été traitée par les dorsaux puis envoyée au système de gestion de donnée,
+les résultats sont affichés dans la boite principe de l'interface utilisateur.
+
+Dépendant du type de requête effectuée, les résultats retournés sont affichés sous forme phrase
+ou bien sous forme de tuple.
+
+Pour en savoir plus sur les différentes requêtes, veuillez consulter le rapport de l'application.
 
 <!-- ROADMAP -->
 ## Feuille de route
 
-- [ ] Développer le back-end
-- [ ] Utiliser le cadre de développement Hibernate
-- [ ] Développer le front-end
+- [X] Développer le back-end
+- [X] Utiliser le cadre de développement Hibernate
+- [X] Développer le front-end
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
