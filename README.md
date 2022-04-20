@@ -91,13 +91,13 @@ On pourra inclure dans chaque entité tous les éléments réalistes possibles �
 <!-- USAGE EXAMPLES -->
 ## Guide d'utilisation
 
-- Assurer vous que toues les étapes de la secetion <b>préalable pour la production</b> sont complétées.
+- Assurez-vous que toutes les étapes de la section <b>préalable pour la production</b> sont complétées.
 - Lancer le fichier exécutable jar.
-- Disposés sur l'en-tête de l'interface utilisateur de l'application, se trouve quatres boutons.
+Disposés sur l'en-tête de l'interface utilisateur de l'application, se trouvent quatres boutons.
 
-Chacun d'entre-eux permettent l'exécution d'un requête.
+Chacun d'entre-eux permet l'exécution d'une requête.
 
-Après que la requête ait été traitée par les dorsaux puis envoyée au système de gestion de donnée,
+Après que la requête ait été traitée par les dorsaux puis envoyée au système de gestion de données,
 les résultats sont affichés dans la boite principale de l'interface utilisateur.
 
 Dépendant du type de requête effectuée, les résultats retournés sont affichés sous forme phrase.s
