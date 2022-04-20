@@ -93,13 +93,15 @@ On pourra inclure dans chaque entité tous les éléments réalistes possibles �
 
 - Assurer vous que toues les étapes de la secetion <b>préalable pour la production</b> sont complétées.
 - Lancer le fichier exécutable jar.
-Disposés sur l'en-tête de l'interface utilisateur de l'application, se trouve quatres boutons.
-Chacun d'entre-eux permettent l'exécution d'un requête.
-Après que la requête ait été traitée par les dorsaux puis envoyée au système de gestion de donnée,
-les résultats sont affichés dans la boite principe de l'interface utilisateur.
+- Disposés sur l'en-tête de l'interface utilisateur de l'application, se trouve quatres boutons.
 
-Dépendant du type de requête effectuée, les résultats retournés sont affichés sous forme phrase
-ou bien sous forme de tuple.
+Chacun d'entre-eux permettent l'exécution d'un requête.
+
+Après que la requête ait été traitée par les dorsaux puis envoyée au système de gestion de donnée,
+les résultats sont affichés dans la boite principale de l'interface utilisateur.
+
+Dépendant du type de requête effectuée, les résultats retournés sont affichés sous forme phrase.s
+ou bien sous forme de tuple.s.
 
 Pour en savoir plus sur les différentes requêtes, veuillez consulter le rapport de l'application.
 
