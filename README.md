@@ -89,7 +89,7 @@ On pourra inclure dans chaque entité tous les éléments réalistes possibles �
 <!-- USAGE EXAMPLES -->
 ## Guide d'utilisation
 
-- Assurez-vous que toutes les étapes de la section <b>préalable pour la production</b> sont complétées.
+- Assurez-vous que toutes les étapes de la section <b>préalables pour la production</b> sont complétées.
 - Lancer le fichier exécutable jar.
 Disposés sur l'en-tête de l'interface utilisateur de l'application, se trouvent quatres boutons.
 
