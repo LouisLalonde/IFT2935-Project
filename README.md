@@ -103,7 +103,7 @@ ou bien sous forme de tuple.s.
 
 Pour en savoir plus sur les différentes requêtes, veuillez consulter le rapport de l'application.
 
-![plot](./imgs/UI.png)
+![plot](./img/UI.png)
 
 <!-- ROADMAP -->
 ## Feuille de route
